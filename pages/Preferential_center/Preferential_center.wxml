@@ -1,0 +1,25 @@
+<!--pages/Preferential_center/Preferential_center.wxml-->
+        <view wx:if='{{dat.yhq_info==""||dat.yhq_info==null?false:true}}'>
+            <view wx:for='{{dat.yhq_info}}' wx:key='{{index}}'>
+                <view class="coupon_box" style="background:url({{ldb_code}}) no-repeat;background-size:100%;">
+                    <view class="coupon_top">{{item.price}}元</view>
+                    <view class="coupon_middle">
+                        <view>{{item.title}}</view>
+                        <view>{{item.start_time}}-{{item.end_time}}</view>
+                    </view>
+                    <view class="coupon_botton">
+                        <view>满{{item.minprice}}元</view>
+                        <view>可用</view>
+                        <view bindtap="draw" data-id="{{item.id}}">立即领取</view>
+                    </view>
+                </view>
+            </view>
+            <view class="discount" bindtap="discount">去优惠券</view>
+        </view>
+        <view class='boxs' wx:else>
+            <view class='login_box'>
+                <image src='/assets/sale.png'></image>
+                <view class='message'>还没有优惠劵哦~</view>
+                <!-- <view class="add_site" bindtap='get'>去领取</view> -->
+            </view>
+        </view>

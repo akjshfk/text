@@ -1,0 +1,11 @@
+<!--pages/wx_login/wx_login.wxml-->
+<view class='login'>
+    <view class='login_box'>
+        <image src='/assets/login.png'></image>
+        <view class='message'>请确认以下授权信息</view>
+        <view class='heart'>·获取你的信息（头像，信息等）</view>
+        <view class='accredit'>
+           <button type='primary' open-type='getUserInfo' lang="zh_CN"  hover-class="btnhover" bindgetuserinfo="getUserInfo">授权</button>
+        </view>
+    </view>
+</view>

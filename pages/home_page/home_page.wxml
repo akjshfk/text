@@ -1,0 +1,33 @@
+<!--pages/home_page/home_page.wxml-->
+<van-tabs bind:click="onClick">
+  <van-tab title="全部"></van-tab>
+  <van-tab title="待处理"></van-tab>
+  <van-tab title="处理中"></van-tab>
+  <van-tab title="已完成"></van-tab>
+</van-tabs>
+<view class="my_order">
+    <view class="{{listIndex==0?'all':'on'}}">
+       <view class="all_box">
+           <view class="all_box_top">
+               <view>编号：12345678542321255</view>
+               <view>待处理</view>
+           </view>
+           <view class="all_box_canter">
+              <image src="/assets/banner.png"></image>
+              <view class="all_box_text">
+                  <view>油烟机清洗</view>
+                  <view><text>姓</text><text>名：</text>戴彦龙</view>
+                  <view>联系方式：18000209326</view>
+                  <view><text>所在地址：</text><text>举案说法开始看的积分卡萨浪费</text></view>
+              </view>
+           </view>
+           <view class="all_box_botton">
+               <view class='{{checkIndex==1?"act":""}}' bindtap="check" data-id="1">查看详情</view>
+               <view class='{{checkIndex==2?"act":""}}' bindtap="check" data-id="2">联系客服</view>
+           </view>
+       </view>
+    </view>
+    <view class="{{listIndex==1?'pending':'on'}}">2222</view>
+    <view class="{{listIndex==2?'processed':'on'}}">3333</view>
+    <view class="{{listIndex==3?'completed':'on'}}">4444</view>
+</view>

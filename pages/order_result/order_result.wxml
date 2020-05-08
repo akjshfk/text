@@ -1,0 +1,9 @@
+<!--pages/order_result/order_result.wxml-->
+<view class="order_result">
+    <view class="order_result_box">
+        <image src="/assets/Reservation_success_png.png" mode="widthFix"></image>
+        <view wx:if='{{options.err==404}}'>预约失败</view>
+        <view wx:else>预约成功</view>
+        <view bindtap="examine">查看详情</view>
+    </view>
+</view>

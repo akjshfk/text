@@ -1,0 +1,58 @@
+<!--pages/query/query.wxml-->
+<view class="nav">
+    <view wx:for='{{list}}' wx:key='{{index}}' bindtap="onclick" data-index="{{index}}" data-id="{{item.id}}"  class="{{idIndex==index?'on':''}}">{{item.name}}             </view>
+</view>
+<view class="query">
+    <view class="{{idIndex==0?'install':'in'}}" >
+         <view class="query_conent" wx:for='{{article}}' wx:key='{{index}}' bindtap="details" data-id="{{item.id}}">
+              <image src="{{item.img}}"></image>
+              <view class="query_text">
+                  <view class="twoline">{{item.intro}}</view>
+                  <view class="query_right">
+                      <view>{{item.add_time}}</view>
+                      <view>
+                          <image src="/assets/icon_visited.png"  ></image>
+                          <text>{{item.hits}}</text>
+                      </view>
+                  </view>
+              </view>
+          </view>
+    </view>
+    <view class="{{idIndex==1?'upkeep':'in'}}">
+         <view class="query_conent" wx:for='{{article}}' wx:key='{{index}}' bindtap="details" data-id="{{item.id}}">
+              <image src="{{item.img}}"></image>
+              <view class="query_text">
+                  <view class="twoline">{{item.intro}}</view>
+                  <view class="query_right">
+                      <view>{{item.add_time}}</view>
+                      <view>
+                          <image src="/assets/icon_visited.png" ></image>
+                          <text>{{item.hits}}</text>
+                      </view>
+                  </view>
+              </view>
+          </view>
+    </view>
+    <view class="{{idIndex==2?'employ':'in'}}">
+        <view class="query_conent" wx:for='{{article}}' wx:key='{{index}}' bindtap="details" data-id="{{item.id}}">
+              <image src="{{item.img}}"></image>
+              <view class="query_text">
+                  <view class="twoline">{{item.intro}}</view>
+                  <view class="query_right">
+                      <view>{{item.add_time}}</view>
+                      <view>
+                          <image src="/assets/icon_visited.png" ></image>
+                          <text>{{item.hits}}</text>
+                      </view>
+                  </view>
+              </view>
+          </view>
+    </view>
+   
+    
+    
+          
+     
+      
+   
+</view>

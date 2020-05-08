@@ -1,0 +1,27 @@
+<template name="footer">
+  <view class='footer-box'>
+    <view class='footer flex'>
+      <view class='footer-item flex1 flexv ali-c' bindtap='ToHome' data-id='../index/index'>
+        <image src='/assets/home_es.png' class='foot-img flex home' wx:if="{{member.type == 'index'}}"></image>
+        <image src='/assets/home.png' class='foot-img flex home' wx:else></image>
+        <text class='{{ member.type == "index" ? "red" : "" }}'>首页</text>
+      </view>
+      <view class='footer-item flex1 flexv ali-c'  bindtap='ToClassify' data-id='../classify/classify'>
+        <image src='/assets/home.png' class='foot-img flex home' wx:if="{{member.type == 'classify'}}"></image>
+        <image src='/assets/home.png' class='foot-img flex home' wx:else></image>
+        <text class='{{ member.type == "classify" ? "red" : "" }}'>福利</text>
+      </view>
+      
+      <view class='footer-item flex1 flexv ali-c'  bindtap='ToWecheat' data-id='../wecheat/wecheat' >
+        <image src='/assets/home.png' class='foot-img flex home' wx:if="{{member.type == 'wecheat'}}"></image>
+        <image src='/assets/home.png' class='foot-img flex home' wx:else></image>
+        <text class='{{ member.type == "wecheat" ? "red" : "" }}'>在线客服</text>
+      </view>
+      <view class='footer-item flex1 flexv ali-c'  bindtap='WeChatUserInfo' data-id='../user/user'>
+        <image src='/assets/home.png' class='foot-img flex home' wx:if="{{member.type == 'user'}}"></image>
+        <image src='/assets/home.png' class='foot-img flex home' wx:else></image>
+        <text class='{{ member.type == "user" ? "red" : "" }}'>我的</text>
+      </view>
+    </view>
+  </view>
+</template>

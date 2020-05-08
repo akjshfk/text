@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-action-sheet": "/miniprogram_npm/_vant-weapp@0.5.7@vant-weapp/action-sheet/index"
+  },
+  "navigationBarTitleText": "活动详情"
+}

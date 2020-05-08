@@ -1,0 +1,19 @@
+/* pages/member/member.wxss */
+.member{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.member_box{
+  margin-top: 200rpx;
+}
+.member_box>image{
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 120rpx;
+}
+.member_box>view{
+  text-align: center;
+  margin-top: 60rpx;
+  font-size: 32rpx;
+}

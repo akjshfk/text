@@ -1,0 +1,44 @@
+/* pages/idea_feedback/idea_feedback.wxss */
+page{
+  background: #f5f5f5;
+}
+.textclass {
+  background: #fff;
+  margin-top: 30rpx;
+}
+
+.title{
+  font-size: 28rpx;
+  border-bottom: 1px solid #f5f5f5;
+  width: 100%;
+  line-height: 90rpx;
+  margin: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.textace {
+  padding: 20rpx;
+  height: 400rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: relative;
+}
+
+.textace textarea {
+  height: 100%;
+  font-size: 32rpx;
+}
+
+.btn-box {
+  margin: 100rpx 25rpx 0;
+}
+
+.btn-box>button{
+  height: 100rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40rpx;
+  background: #F8473D;
+}

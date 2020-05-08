@@ -1,0 +1,38 @@
+/* pages/my_product/my_product.wxss */
+page{
+  background: #f5f5f5;
+}
+.my_product{
+  width: 100%;
+}
+.product{
+  padding: 40rpx 22rpx;
+  background: white;
+  margin-top: 40rpx;
+  font-size: 32rpx;
+}
+.product_top, .product_middle, .product_button{
+  display: flex;
+}
+.product_middle{
+  margin: 30rpx 0;
+}
+/*数据为空时 */
+.boxs{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 240rpx;
+}
+.login_box>image{
+  width: 430rpx;
+  height: 320rpx;
+}
+.message{
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa7a7;
+}

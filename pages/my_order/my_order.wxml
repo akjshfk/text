@@ -1,0 +1,61 @@
+<!--pages/my_order/my_order.wxml-->
+<view class="nav">
+    <view bindtap="onClick" data-id="" class="{{listIndex==''?'ons':''}}">全部</view>
+    <view bindtap="onClick" data-id="1" class="{{listIndex==1?'ons':''}}">待支付</view>
+    <view bindtap="onClick" data-id="2" class="{{listIndex==2?'ons':''}}">待分配</view>
+    <view bindtap="onClick" data-id="3" class="{{listIndex==3?'ons':''}}">待处理</view>
+    <view bindtap="onClick" data-id="4" class="{{listIndex==4?'ons':''}}">已处理</view>
+    <view bindtap="onClick" data-id="8" class="{{listIndex==8?'ons':''}}">已完成</view>
+</view>
+<view class="my_order" wx:if='{{list==""?false:true}}'>
+    <!-- <view class="{{listIndex==''?'all':'on'}}"> -->
+       <view class="all_box" wx:for='{{list}}' wx:key='{{index}}' >
+           <view class="all_box_top" >
+               <view>编号：{{item.order_number}}</view>
+               <view wx:if='{{item.status==1}}'>待支付</view>
+               <view wx:if='{{item.status==2}}'>待分配</view>
+               <view wx:if='{{item.status==3}}'>待处理</view>
+               <view wx:if='{{item.status==4}}'>已处理</view>
+               <view wx:if='{{item.status==8}}'>已完成</view>
+           </view>
+           <view class="all_box_canter" wx:for='{{item.item}}' wx:key='{{index}}'>
+              <image src="{{item.img}}"></image>
+              <view class="all_box_text">
+                  <view>{{item.title}}</view>
+                  <view><text></text><text>规格:{{item.guige_info}}</text></view>
+                  <view><text>{{item.prices}}元</text><text>x{{item.nums}}</text></view>
+              </view>
+           </view>
+           <view class="all_box_botton">
+               <view>共{{item.num}}件商品 合计：￥{{item.realprices}}</view>
+               <view>
+                   <view  bindtap="checkt" data-id="{{item.id}}" data-status="{{item.status}}">查看详情</view>
+                   <view class='act'  bindtap="toPay" data-order_number="{{item.order_number}}" data-realprices="{{item.realprices}}" wx:if='{{item.status==1}}'>去支付</view>
+                   <view class='act'  bindtap="cancel_order" data-id="{{item.id}}" wx:if="{{item.status==1}}" >取消订单</view>
+                   <view class='act'  bindtap="remove" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.status==9||item.status==4}}" >删除订单</view>
+                   <view class='act'  bindtap="kefu">联系客服</view>
+                   <view class='act'  bindtap="checr" data-id="{{item.id}}" wx:if="{{item.status==4}}" >去评价</view>
+                   <view class='act'  data-id="{{item.id}}" wx:if="{{item.status==3}}" >申请售后</view>
+               </view>
+           </view>
+       </view>  
+</view>
+ <view class='boxs' wx:else>
+    <view class='login_box'>
+        <image src='/assets/indent.png'></image>
+        <view class='message'>您暂时还没有订单哦~</view>
+    </view>
+ </view>
+
+ <!-- 拨打电话弹窗 -->
+ <view class='windows_box' wx:if="{{windows}}" catchtouchmove="return">
+  <view class='windows' catchtouchmove="return">
+    <view class='windows_top' catchtouchmove="return">
+        <view>你确定拨打客服电话吗？</view>
+    </view>
+    <view class='windows_botton' catchtouchmove="return">
+        <view class='windows_botton_left' bindtap='cancel'>取消</view>
+        <view class='windows_botton_reght' bindtap='confirm'>确定</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-picker": "/miniprogram_npm/_vant-weapp@0.5.7@vant-weapp/picker/index"
+  },
+  "navigationBarTitleText": "添加银行卡"
+}

@@ -1,0 +1,41 @@
+<!--pages/address/address.wxml-->
+<view class='addressList' wx:if='{{list==""?false:true}}'>
+    <view class='addressList_box' wx:for="{{list}}" wx:key="{{index}}" bindtap="selectList" data-index="{{index}}" data-id="{{item.id}}">
+        <view class='addressList_box_top'>
+            <view class='addressList_box_top_tops'>
+                <text>{{item.person}}</text>
+                <text>{{item.mobile}}</text>
+            </view>
+            <text>{{item.address}}{{item.min_address}}</text>
+        </view>
+        <view class='addressList_box_botton'>
+            <view class='addressList_box_botton_left'>
+              <icon wx:if="{{item.default_a==1?true:false}}" type="success" size="20" color="red"   catchtap="selectList" data-id="{{item.id}}"/>
+				      <icon wx:else type="circle" size="20" catchtap="selectList" data-id="{{item.id}}"/>
+              <text>默认地址</text>
+            </view>
+            <view class='addressList_box_botton_right'>
+              <view class='bl' catchtap='addre' data-id='{{item.id}}'>
+                <image src='/images/img/edit-ico.png'></image>
+                <text>编辑</text>
+              </view>
+              <view class='sc' catchtap='del' data-id='{{item.id}}' data-index='{{index}}'>
+                <image src='/images/img/delete-ico.png'></image>
+                <text>删除</text>
+              </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='add' bindtap='add'>
+        <view>添加地址</view>
+    </view>
+</view>
+
+<view class='boxs' wx:else>
+    <view class='login_box'>
+        <image src='/assets/site.png'></image>
+        <view class='message'>您还为添加收货地址~</view>
+        <view class="add_site" bindtap='add'>添加地址</view>
+    </view>
+</view>

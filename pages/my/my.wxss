@@ -1,0 +1,214 @@
+/* pages/my/my.wxss */
+page{
+  background: #f5f5f5;
+}
+.my{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.my_heart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx 0rpx;
+}
+.partner{
+  padding: 8rpx 30rpx;
+  border: 1rpx solid white;
+  display: flex;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  justify-content: space-between;
+}
+.partner>image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 20rpx;
+}
+.my_hearts{
+  display: flex;
+  align-items: center;
+}
+.my_heart>image{
+  width: 240rpx;
+  height: 60rpx;
+}
+.indent{
+  background: white;
+  padding: 0 60rpx;
+  border-radius: 20rpx;
+}
+.indent>view:nth-child(1){
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.indent_left>image{
+   margin: 0 0 16rpx 19rpx;
+   width: 50rpx;
+   height: 50rpx;
+}
+.indent_left{
+  position: relative;
+}
+.indent_left>view{
+  font-size: 29rpx;
+}
+.indent_box{
+  height: 170rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my_hearts>image{
+  width: 120rpx;
+  height: 120rpx;
+  border: 8rpx solid white;
+  border-radius: 50%;
+}
+.my_hearts>view:nth-child(2){
+  margin-left: 20rpx;
+  width: 200rpx;
+  overflow: hidden;
+  color: white
+}
+.my_list{
+  margin-top: 20rpx;
+  background: white;
+  border-radius: 20rpx;
+}
+.my_list_box{
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.my_list_left{
+  display: flex;
+  align-items: center;
+}
+.my_list_left>view{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.my_list_left>image{
+  width: 43rpx;
+  height: 50rpx;
+}
+.my_list_box .es{
+  width: 50rpx;
+  height: 50rpx;
+}
+.my_list_box>image, .my_list_right>image{
+  width: 16rpx;
+  height: 30rpx;
+}
+.jiatui{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cecbcb;
+  font-size: 30rpx;
+  margin-top: 100rpx;
+}
+.my_indent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gengdou{
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+.gengdou text{
+  color: #9b9999;
+}
+.gengdou>image{
+  width: 16rpx;
+  height: 30rpx;
+  margin-left: 18rpx;
+}
+.my_list_right{
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+/* 《弹窗 */
+.windows_box{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.windows{
+  width: 600rpx;
+  height: 270rpx;
+  background-color: white;
+  margin: 0 auto;
+  position: fixed;
+  top: 444rpx;
+  left: 80rpx;
+  border-radius: 20rpx;
+}
+.windows_top{
+  width: 100%;
+  height: 66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #eeeeee;
+  font-size: 32rpx;
+}
+.windows_botton{
+  display: flex;
+  width: 100%;
+  height: 34%;
+}
+.windows_botton>view:nth-child(1), .windows_botton>view:nth-child(2){
+  width: 50%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx; 
+}
+.windows_botton>view:nth-child(2){
+  border-left:1rpx solid #eeeeee;
+  color: red;
+  font-size: 32rpx;
+}
+.ont{
+  padding: 0 140rpx;
+}
+.indent_left>view:nth-child(1){
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.indent_left>view:nth-child(1)>text:nth-child(1){
+  font-size: 40rpx;
+  font-weight: 800; 
+  margin-right: 10rpx;
+}
+/* 角标 */
+.indent_left .icontt{
+  width: 32rpx;
+  height: 32rpx;
+  margin: auto;
+  position: absolute;
+  z-index: 100;
+  top: -5rpx;
+  right: 10rpx;
+  border-radius: 100%;
+  font-size: 22rpx;
+  line-height: 32rpx;
+  color: #fff;
+  background-color: #ff2e2e;
+
+}

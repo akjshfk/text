@@ -1,0 +1,24 @@
+<!--pages/my_product/my_product.wxml-->
+<view class="my_product" wx:if='{{list==""?false:true}}'>
+    <view class="product" wx:for='{{list}}' wx:key='{{index}}'>
+        <view class="product_top">
+            <view>商品名称：</view>
+            <view>{{item.item}}</view>
+        </view>
+        <view class="product_middle">
+            <view>商品数量：</view>
+            <view>x{{item.num}}</view>
+        </view>
+        <view class="product_button">
+            <view>总  价：</view>
+            <view>{{item.price}}元</view>
+        </view>
+    </view>
+</view>
+<view class='boxs' wx:else>
+    <view class='login_box'>
+        <image src='/assets/product (2).png'></image>
+        <view class='message'>暂无产品哦~</view>
+        <!-- <view class="add_site" bindtap='get'>去领取</view> -->
+    </view>
+</view>

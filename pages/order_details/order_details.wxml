@@ -1,0 +1,73 @@
+<!--pages/order_details/order_details.wxml-->
+<view class="order_details">
+    <!-- <view class="details_heart">待处理</view> -->
+   
+    <view class="details_heart" wx:if='{{options.status==1}}'>待支付</view>
+    <view class="details_heart" wx:if='{{options.status==2}}'>待分配</view>
+    <view class="details_heart" wx:if='{{options.status==3}}'>待处理</view>
+    <view class="details_heart" wx:if='{{options.status==4}}'>已处理</view>
+    <view class="details_heart" wx:if='{{options.status==8}}'>已完成</view>
+
+
+    <view class="details_type" wx:for='{{info.guige}}'>
+        <view class="details_type_left"><image src="{{item.img}}"></image></view>
+        <view class="details_type_right">
+          <view>
+              <view class="details_type_right_top">{{item.title}}</view>
+              <view class="details_type_right_conent">
+                  <!-- <view>品牌：海尔</view> -->
+                  <view>规格：{{item.guige_info}}</view>
+              </view>
+              <view class="details_type_right_botton">
+                  <view>￥{{item.prices}}元</view>
+                  <view>x{{item.nums}}</view>
+              </view>
+          </view>
+        </view>
+    </view>
+    <view class="details">
+        <view>姓名：{{info.address.shperson}}</view>
+        <view>联系方式：{{info.address.mobile}}</view>
+        <!-- <view>所在地区：{{info.address.address}}</view> -->
+        <view>所在地址：{{info.address.address}}{{info.address.min_address}}</view>
+    </view>
+    <view class="details" wx:if='{{options.status==3&&staff}}'>
+        <view class="yuangong">服务工人信息</view>
+        <view>姓名：{{staff.realname}}</view>
+        <view>联系方式：{{staff.mobile}}</view>
+        <view>服务时间：{{staff.repair_time}}</view>
+    </view>
+    <view class="details on">
+        <view>实付金额：￥{{info.order.realprices}}</view>
+        <view wx:if='{{info.order.yh_status==0}}'>优惠金额：￥{{info.order.youhui}}</view>
+        <view wx:if='{{info.order.yh_status==1}}'>优惠码金额：￥{{info.order.youhui}}</view>
+        <view wx:if='{{info.order.yh_status==2}}'>优惠劵金额：￥{{info.order.youhui}}</view>
+        <view  wx:if='{{options.status==1?false:true}}'>支付方式：微信</view>
+        <view>订单编号：{{info.order.order_number}}</view>
+        <view>下单时间：{{info.order.add_time}}</view>
+        <view>上门时间：{{info.order.service_time}}</view>
+        <view wx:if='{{info.order.memos==null?false:true}}'>备注说明：{{info.order.memos}}</view>
+        <view wx:else>备注说明：</view>
+    </view>
+     
+    <view class="bott ft">
+          <view class='act'  bindtap="toPay" data-order_number="{{info.order.order_number}}" data-realprices="{{info.order.realprices}}" wx:if='{{options.status==1}}'>去支付</view>
+          <view class='act'  bindtap="kefu">联系客服</view>
+          <view class='act'  bindtap="cancel_order" data-id="{{info.order.id}}" wx:if="{{options.status==1}}" >取消订单</view>
+          <view class='act'  bindtap="remove" data-id="{{info.order.id}}"  wx:if="{{options.status==9||options.status==4}}" >删除订单</view>
+          <view class='act'  bindtap="checr" data-id="{{info.order.id}}" wx:if="{{options.status==4}}" >去评价</view>
+     </view>
+</view>
+
+<!-- 拨打电话弹窗 -->
+ <view class='windows_box' wx:if="{{windows}}" catchtouchmove="return">
+  <view class='windows' catchtouchmove="return">
+    <view class='windows_top' catchtouchmove="return">
+        <view>你确定拨打客服电话吗？</view>
+    </view>
+    <view class='windows_botton' catchtouchmove="return">
+        <view class='windows_botton_left' bindtap='cancel'>取消</view>
+        <view class='windows_botton_reght' bindtap='confirm'>确定</view>
+    </view>
+  </view>
+</view>

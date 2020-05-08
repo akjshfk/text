@@ -1,0 +1,38 @@
+<!--pages/my_evaluate/my_evaluate.wxml-->
+<view class="Lottery" style="background: #F9655D;">
+     <view class="Lottery_heart" style="background:url({{backdrop}}) no-repeat;background-size:100%;"></view>
+     <view class="award">
+        <view>
+           <view class="award_top"><image src="/assets/common_img.png"></image><view>奖品介绍</view></view>
+           <view class="award_foot"><text>奖品：</text><text>爱奇艺VIP激活码兑换券</text></view>
+        </view>
+     </view>
+     <view class="award on">
+         <view class="award_box">
+            <view class="award_top"><image src="/assets/common_img.png"></image><view>奖品介绍</view></view>
+            <view class="award_conent"><view><text>规</text><text>则:</text></view><text>1人中奖，全队中奖爱奇艺VIP激活码兑换券</text></view>
+         </view>
+     </view>
+     <view class="award on">
+        <view>
+           <view class="award_top"><image src="/assets/common_img.png"></image><view>参与用户</view></view>
+           <view class="award_foot"><text></text><text>活动还没有人参与哟！赶快下手吧</text></view>
+        </view>
+     </view>
+     <view class="participant" style="font-size: 34rpx;font-weight: 900;" bindtap="participant">
+         <view>参与抽奖</view>
+     </view>
+
+
+     
+</view>
+
+<van-action-sheet show="{{ show }}" title="关注提示">
+  <view class="hint">
+     <view bindtap="close"><image src="/assets/cancel-ico.png"></image></view>
+     <view>避免中奖后无法发放奖品， </view>
+     <view>您需要关注“众超之家”公众号，方便领取奖品！</view>
+     <image src="/assets/logo.png"></image>
+     <view bindtap="copy">一键复制公众号名称</view>
+  </view>
+</van-action-sheet>

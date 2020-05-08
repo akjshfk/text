@@ -1,0 +1,129 @@
+/* pages/shop_list/shop_list.wxss */
+page{
+  background: #f5f5f5;
+}
+
+/* 地区 */
+.area>image{
+  margin-top:104rpx; 
+  width: 100%;
+}
+.area_box{
+  padding: 22rpx;
+  background: white;
+  margin-top: 20rpx;
+}
+.area_box>view:nth-child(3){
+  margin-bottom: 0rpx;
+}
+.area_type{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.area_type>view:nth-child(2){
+  font-size: 34rpx;
+}
+.area_type_top{
+  display: flex;
+  width: 540rpx;
+}
+.area_type_top>image{
+  width: 36rpx;
+  height: 50rpx;
+  position: relative;
+  top: 1rpx;
+}
+.area_type_top>text{
+  font-size: 34rpx;
+  display: inline-block;
+  width: 470rpx;
+  font-weight: 700;
+  margin-left: 20rpx;
+}
+.area_type_middle{
+  font-size: 32rpx;
+  margin-left: 44rpx;
+  color: #676767;
+}
+.area_type_botton{
+  margin: 30rpx 0rpx 0 44rpx;
+  display: flex;
+}
+.area_type_botton>view{
+  padding: 14rpx 20rpx;
+}
+.area_type_botton>view:nth-child(1){
+  background: #f75e3f;
+  display: inline-block;
+  color: white;
+  margin-right: 20rpx;
+  border-radius: 16rpx;
+}
+.area_type_botton>view:nth-child(2){
+  border: 1rpx solid #666666;
+  color: #666666;
+  margin-right: 20rpx;
+  border-radius: 16rpx;
+}
+
+/*搜索框*/
+
+.search-box {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 102rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.search-box .search-left {
+  height: 70rpx;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 0 50rpx 0 10rpx;
+  border-radius: 40rpx;
+  position: relative;
+}
+
+.search-box .search-left image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.search-box .search-left .icon {
+  position: absolute;
+  transform: translateX(-5rpx);
+  background: white;
+  border-radius: 50%;
+  top: 10rpx;
+  right: 6rpx;
+}
+
+.search-box .search-left input {
+  margin-left: 10rpx;
+  width: 100%;
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 56rpx;
+}
+
+.search-box .search-btn {
+  width: 90rpx;
+  height: 56rpx;
+  margin-left: 10rpx;
+  line-height: 56rpx;
+  text-align: center;
+  color: #666;
+}
+
+.search-box .search-btn.on {
+  color: #f00;
+}

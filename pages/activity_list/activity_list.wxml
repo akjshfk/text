@@ -1,0 +1,30 @@
+<!--pages/activity_list/activity_list.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="activity_details">
+    <view class="details_title">{{list.title}}</view>
+    <view class="details_time">
+        <view>{{list.add_time}}</view>
+        <view>
+            <image src="/assets/icon_visited.png"></image>
+            <text>{{list.hits}}</text>
+        </view>
+    </view>
+    <view class="details">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+</view>
+<view class="bott">
+    <view  class="like">
+      <image src="/assets/icon_like_s.png" wx:if='{{collect==0?false:true}}' bindtap="cancel" data-id="{{list.id}}"></image>
+      <image src="/assets/icon_like.png" wx:else bindtap="dainzan" data-id="{{list.id}}"></image>
+      <view>喜欢</view>
+    </view>
+    <view class="like opp">
+       <button open-type='share'>
+           <image src="/assets/icon_forwarding.png"></image>
+           <view>转发</view>
+       </button>
+    </view>
+</view>
+
+

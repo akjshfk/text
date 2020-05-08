@@ -1,0 +1,322 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.0",
+	"appid": "wx0c886cab25a3e931",
+	"projectname": "%E4%BC%97%E8%B6%85%E4%B9%8B%E5%AE%B6",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/webView/webView",
+					"pathName": "pages/webView/webView",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "subscribe_rinse 清洗預約",
+					"pathName": "pages/subscribe_rinse/subscribe_rinse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "address  选择地址",
+					"pathName": "pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "address_es 新增地址",
+					"pathName": "pages/address_es/address_es",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shop_list //门店列表",
+					"pathName": "pages/shop_list/shop_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "discount 优惠券",
+					"pathName": "pages/discount/discount",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "activity_list  咨询详情",
+					"pathName": "pages/activity_list/activity_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "activity_details  活动详情",
+					"pathName": "pages/activity_details/activity_details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "query  自助查询",
+					"pathName": "pages/query/query",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my_order 我的预约",
+					"pathName": "pages/my_order/my_order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "service_evaluation 服务评价",
+					"pathName": "pages/service_evaluation/service_evaluation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "partner  合作商申请",
+					"pathName": "pages/partner/partner",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "distributor  分销商",
+					"pathName": "pages/distributor/distributor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "login  登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "feedback //意见反馈",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my_product 我的产品",
+					"pathName": "pages/my_product/my_product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cashDetail  提现明细",
+					"pathName": "pages/cashDetail/cashDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "withdraw  申请提现",
+					"pathName": "pages/withdraw/withdraw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order_details  //订单详情",
+					"pathName": "pages/order_details/order_details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "buy_product  //购买产品",
+					"pathName": "pages/buy_product/buy_product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my_team //我的团队",
+					"pathName": "pages/my_team/my_team",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "member //会员中心",
+					"pathName": "pages/member/member",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "home_page //首页",
+					"pathName": "pages/home_page/home_page",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mine //我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order_result  //预约结果",
+					"pathName": "pages/order_result/order_result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 26,
+					"name": "personal_information  个人资料",
+					"pathName": "pages/personal_information/personal_information",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cooperative  //合作商申请",
+					"pathName": "pages/cooperative/cooperative",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "audit  //审核",
+					"pathName": "pages/audit/audit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "add_bank //添加银行卡",
+					"pathName": "pages/add_bank/add_bank",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "bank  //银行卡",
+					"pathName": "pages/bank/bank",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Orderdetail  //合作商详情",
+					"pathName": "pages/Orderdetail/Orderdetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "deposit //提现",
+					"pathName": "pages/deposit/deposit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wx_login //用户登录",
+					"pathName": "pages/wx_login/wx_login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 34,
+					"name": "bank_es //分销商提现银行卡",
+					"pathName": "pages/bank_es/bank_es",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "we //关于我们",
+					"pathName": "pages/we/we",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "people_list //参与人员列表",
+					"pathName": "pages/people_list/people_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Preferential_center  优惠中心",
+					"pathName": "pages/Preferential_center/Preferential_center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "template 模板",
+					"pathName": "pages/template/template",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

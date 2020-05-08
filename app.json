@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/welfare/welfare",
+    "pages/my/my",
+    "pages/subscribe/subscribe",
+    "pages/subscribe_rinse/subscribe_rinse",
+    "pages/address/address",
+    "pages/address_es/address_es",
+    "pages/shop_list/shop_list",
+    "pages/discount/discount",
+    "pages/activity_list/activity_list",
+    "pages/activity_details/activity_details",
+    "pages/query/query",
+    "pages/member/member",
+    "pages/webView/webView",
+    "pages/my_order/my_order",
+    "pages/wx_login/wx_login",
+    "pages/service_evaluation/service_evaluation",
+    "pages/order_details/order_details",
+    "pages/distributor/distributor",
+    "pages/feedback/feedback",
+    "pages/my_product/my_product",
+    "pages/cashDetail/cashDetail",
+    "pages/withdraw/withdraw",
+    "pages/buy_product/buy_product",
+    "pages/my_team/my_team",
+    "pages/deposit/deposit",
+    "pages/home_page/home_page",
+
+    "pages/mine/mine",
+    "pages/personal_information/personal_information",
+    "pages/idea_feedback/idea_feedback",
+    "pages/cooperative/cooperative",
+    "pages/audit/audit",
+    "pages/add_bank/add_bank",
+    "pages/bank/bank",
+    "pages/bank_es/bank_es",
+    "pages/Orderdetail/Orderdetail",
+    "pages/we/we",
+    "pages/people_list/people_list",
+    "pages/Preferential_center/Preferential_center",
+    "pages/order_result/order_result"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "众超之家",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#db3333",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "navigationBarBackgroundColor": "#ccc",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/home.png",
+        "selectedIconPath": "/assets/home_es.png"
+      },
+      {
+        "navigationBarBackgroundColor": "#ccc",
+        "pagePath": "pages/welfare/welfare",
+        "text": "福利",
+        "iconPath": "/assets/welfare.png",
+        "selectedIconPath": "/assets/welfare_es.png"
+      },
+      {
+        "navigationBarBackgroundColor": "#ccc",
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/assets/my.png",
+        "selectedIconPath": "/assets/my_es.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

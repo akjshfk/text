@@ -1,0 +1,40 @@
+<!--pages/buy_product/buy_product.wxml-->
+<view class="buy_product">
+    <view class="buy_product_heart">
+        <view class="buy_product_box">
+            <view>商品名称</view>
+            <input type="text" placeholder="请输入商品名称"></input>
+        </view>
+        <view class="buy_product_box">
+            <view>商品名称</view>
+            <input type="text" placeholder="请输入商品名称"></input>
+        </view>
+        <view class="buy_product_box">
+            <view>商品名称</view>
+            <input type="text" placeholder="请输入商品名称"></input>
+        </view>
+        <view class="button flexc">
+            <button>新增</button>
+        </view>
+    </view>
+    <view class="buy_product_conent">
+        <view class="conent_box">
+            <view>商品名称：一字型淋浴门</view>
+            <view>
+                <view>商品名称：一字型淋浴门</view>
+                <view class="conent_del flexc">删除</view>
+            </view>
+            <view>商品名称：一字型淋浴门</view>
+        </view>
+    </view>
+    <view class="buy_product_conent">
+        <view class="conent_box">
+            <view>商品名称：一字型淋浴门</view>
+            <view>
+                <view>商品名称：一字型淋浴门</view>
+                <view class="conent_del flexc">删除</view>
+            </view>
+            <view>商品名称：一字型淋浴门</view>
+        </view>
+    </view>
+</view>

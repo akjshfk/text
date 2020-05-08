@@ -1,0 +1,107 @@
+<!--pages/Orderdetail/Orderdetail.wxml-->
+<view class="Orderdetail">
+    <view class="heart_box">
+       <view class="Time flexc ft">
+            <view  class="Time_left">
+                <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+                  <view class="picker">
+                      <input type="text" placeholder="开始时间" value="{{start_time}}" disabled="true"></input>
+                  </view>
+                </picker>
+            </view> —— 
+            <view class="Time_right">
+                <picker mode="date" value="{{date}}" bindchange="bindDate">
+                  <view class="picker">
+                      <input type="text" placeholder="结束时间" value="{{end_time}}" disabled="true"></input>
+                  </view>
+                </picker>
+            </view>
+        </view>
+        <van-tabs bind:click="onClick">
+          <van-tab title="全部"></van-tab>
+          <van-tab title="未结算"></van-tab>
+          <van-tab title="已结算"></van-tab>
+        </van-tabs>
+    </view>
+    
+    <view class="all" wx:if='{{list==""?false:true}}'>
+        <view class="forms" wx:for='{{list}}' wx:key='{{index}}'>
+            <view class="forms_top ft">
+                <view class="forms_top_left">编号：{{item.order_number}}</view>
+                <view class="forms_top_right">下单时间：{{item.add_time}}</view>
+            </view>
+            <view class="forms_conent" >
+                <view class="forms_conent_top" wx:for='{{item.sop}}' wx:key='{{index}}'>
+                    <image src="{{item.img}}"></image>
+                    <view class="forms_conent_top_right">
+                        <view>{{item.title}}</view>
+                        <view>规格：{{item.guige_info}}</view>
+                        <view>
+                            <text>产品id：{{item.item_id}}</text>
+                            <text>x{{item.nums}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="forms_conent_foot">
+                    <view class="foot_box">
+                        <view class="foot_box_top ft">
+                            <view>联系人</view>
+                            <view>{{item.name}}</view>
+                            <view>手机号</view>
+                            <view>{{item.mobile}}</view>
+                        </view>
+                    </view>
+                    <view class="foot_box">
+                        <view class="foot_box_top ft on" wx:if='{{item.status!=8}}'>
+                            <view>订单状态</view>
+                            <view>未处理</view>
+                            <view>结算状态</view>
+                            <view>未结算</view>
+                        </view>
+                        <view class="foot_box_top ft on" wx:else>
+                            <view>订单状态</view>
+                            <view>已处理</view>
+                            <view>结算状态</view>
+                            <view>已结算</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="forms_foot">
+                <view>
+                    <view>消费金额：</view>
+                    <view>{{item.realprices}}元</view>
+                </view>
+                <view>
+                  <view>预计佣金：</view>
+                  <view wx:if='{{item.commission==null?false:true}}'>{{item.commission}}元</view>
+                  <view wx:else>0.00元</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='boxs' wx:else>
+        <view class='login_box'>
+            <image src='/assets/indent.png'></image>
+            <view class='message'>您暂时还没有订单哦~</view>
+        </view>
+    </view>
+    <view class="botton_box" wx:if='{{list==""?false:true}}'>
+        <view>合计</view>
+        <view class="botton_right">
+             <view>
+                 <view>单数</view>
+                 <view>{{num}}</view>
+             </view>
+             <view>
+                 <view>总额</view>
+                 <view>{{rental}}</view>
+             </view>
+             <view>
+                 <view>预计收益</view>
+                 <view>{{predict}}</view>
+             </view>
+        </view>
+    </view>
+    
+</view>

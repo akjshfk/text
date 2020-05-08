@@ -1,0 +1,67 @@
+<!--pages/distributor/distributor.wxml-->
+<view class="distributor" style="background:url({{backdrop}}) no-repeat;background-size:100%;">
+    <view class="distributor_box">
+      <view>
+            <view class="my_heart">
+              <view>
+                  <image src="{{dat.member.img}}"></image>
+                  <view>{{dat.member.name}}</view>
+                  <view>已成为分销商{{dat.time}}天</view>
+              </view>
+            </view>
+            <view class="distributor_money">
+              <view>
+                  <view><text>￥</text><text>{{dat.partner_info.cash_commission}}</text></view>
+                  <view class="money_box">
+                      <text>可提现金额</text>
+                      <!-- <text>提现</text> -->
+                  </view>
+              </view>
+              <view>
+                  <view><text>￥</text><text>{{dat.partner_info.commission}}</text></view>
+                  <view class="money_box">
+                      <text>累计收益</text>
+                      <!-- <text>提现</text> -->
+                  </view>
+              </view>
+              <view>
+                  <view><text>￥</text><text>{{dat.partner_info.old_commission}}</text></view>
+                  <view class="money_box">
+                      <text>已提现金额</text>
+                      <!-- <text>提现</text> -->
+                  </view>
+              </view>
+          </view>
+      </view>
+        
+    </view>
+    
+    <view class="distributor_type">
+       <view class="distributor_type_box onu" bindtap="QR_code">
+          <image src="/assets/qr_code.png"></image>
+          <view>分销码二维码</view>
+       </view>
+       <view class="distributor_type_box onu" bindtap="my_team">
+          <image src="/assets/icon-team.png"></image>
+          <view>我的团队</view>
+       </view>
+      <view class="distributor_type_box" bindtap="Distribution_details">
+          <image src="/assets/icon-order.png"></image>
+          <view>分销订单</view>
+       </view>
+        <view class="distributor_type_box onu" bindtap="withdraw">
+          <image src="/assets/icon-withdrawal.png"></image>
+          <view>申请提现</view>
+       </view>
+        <view class="distributor_type_box onu" bindtap="withdraw_detail">
+          <image src="/assets/icon-detail.png"></image>
+          <view>提现明细</view>
+       </view>
+       <view class="distributor_type_box" bindtap="bank">
+          <image src="/assets/bank_es.png"></image>
+          <view>银行卡</view>
+       </view>
+    </view>
+
+    <canvas class='flex' id="canv" canvas-id='canv' style='width:270px;height:450px;position: relative;top: -500%;left: -500%;'></canvas>
+</view>

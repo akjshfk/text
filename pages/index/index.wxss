@@ -1,0 +1,95 @@
+/**index.wxss**/
+@import "../template/footer.wxss";
+page{
+  background: #f5f5f5;
+}
+
+.index_swiper{
+  background: white;
+  padding:22rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 400rpx;
+}
+.index_swiper>view{
+  border-radius: 20rpx;
+}
+swiper {
+  height: 360rpx;
+}
+.imgt{
+  width: 100%;
+  border-radius: 20rpx;
+}
+.my_member{
+  margin-top: 30rpx;
+}
+.index_list{
+  width: 100%;
+  margin:22rpx 0 100rpx;
+  background: white;
+  position: relative;
+}
+.imt{
+  width: 100%;
+  height: 300rpx;
+}
+.index_list_box{
+  display: inline-block;
+  width: 50%;
+  padding: 40rpx 0;
+  background: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+.po{
+  border-right: 1rpx solid #eeeeee;
+}
+.index_list>view:nth-child(1){
+  border-bottom: 1rpx solid #eeeeee;
+}
+.index_list>view:nth-child(2){
+  border-bottom: 1rpx solid #eeeeee;
+}
+/* .index_list>view:nth-child(3){
+  position: absolute;
+  top: 284rpx;
+  left: 0;
+  height: 284rpx
+} */
+.index_list>view>image, .po>image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.index_list_box>view, .list_box>view{
+  font-size: 29rpx;
+}
+.jiatui{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cecbcb;
+  font-size: 30rpx;
+}
+
+button::after{
+  border: none;
+  border-radius: 0; 
+  background: inherit;
+}
+.booo{
+  width: 100rpx;
+  height: 100rpx;
+  background: inherit;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 100rpx;
+  right: 30rpx;
+}
+.booo>image{
+  width: 100rpx;
+  height: 100rpx;
+}
+

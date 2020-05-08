@@ -1,0 +1,26 @@
+<!--pages/bank_es/bank_es.wxml-->
+<view class="bank_box">
+    <view class="bank" wx:for='{{list}}' wx:key='{{index}}' bindtap="bank_tap" data-id="{{item.id}}" data-name="{{item.bank_name}}" data-index="{{index}}">
+         <image src="/assets/yinhangqia.png"></image>
+         <view class="bank_top">
+            <view>
+                <view>{{item.bank_name}}</view>
+                <view>尾号{{item.bank_number}}储蓄卡</view>
+            </view>
+            <image src="/assets/pitch_up.png" wx:if='{{imtIndex==index?true:false}}'></image>
+         </view>
+    </view>
+    <view class="bank_botton" bindtap="add">
+      <text>+</text> 
+      <text>添加银行卡</text>
+    </view>
+</view>
+
+<!-- 《无数据状态 -->
+<view class='teamAward_all' wx:if="{{list==''?true:false}}">
+  <view class='teamAward_imgt' >
+    <image src='/assets/bank .png'></image>
+    <view>暂时还添加银行卡哦~</view>
+    <view class="add_bank" bindtap="add_bank">添加银行卡</view>
+  </view>
+</view>

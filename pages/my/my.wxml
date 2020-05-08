@@ -1,0 +1,134 @@
+<!--pages/my/my.wxml-->
+<view class="my" style="background:url({{backdrop}}) no-repeat;background-size:100%;">
+    <view class="my_heart">
+        <view class="my_hearts">
+            <image src="{{actImg}}" bindtap="head_portrait"></image>
+            <view>{{res.member.name}}</view>
+        </view>
+        <!-- <view class="partner" bindtap="partner" wx:if='{{ber==1?false:true}}'>
+            <image src="/assets/icon_cooperation.png"></image>
+            <text>申请合作</text>
+        </view>
+        <view class="partner" bindtap="cooperative" wx:else>
+            <image src="/assets/icon_distribution.png"></image>
+            <text>分销管理</text>
+        </view> -->
+    </view>
+
+    <view class="indent">
+        <view class="my_indent" bindtap="indent" data-id="">
+           <view>我的订单</view>
+           <view class="gengdou"><text>查看更多</text><image src="/assets/to-ico.png"></image></view>
+        </view>
+        <view class="indent_box">
+            <view class="indent_left" bindtap="indent"  data-id="2">
+                <view class="icontt">{{res.nmb}}</view>
+                <image src="/assets/icon-processed.png"></image>
+                <view>待处理</view>
+            </view>
+            <view class="indent_left" bindtap="indent"  data-id="4">
+                <view class="icontt">{{res.nmb_two}}</view>
+                <image src="/assets/icon-pass.png"></image>
+                <view>已处理</view>
+            </view>
+            <view class="indent_left" bindtap="indent"  data-id="8">
+                <image src="/assets/icon-complete.png"></image>
+                <view>已完成</view>
+            </view>
+        </view>
+    </view>
+    
+    <!-- <view class="indent ont" wx:else>
+        <view class="indent_box">
+            <view class="indent_left">
+                <view><text>{{men.partner}}</text><text>单</text></view>
+                <view>今日订单</view>
+            </view>
+            <view class="indent_left">
+                <view>
+                  <text wx:if='{{men.price==""?false:true}}'>{{men.price}}</text>
+                  <text wx:else>0.00</text>
+                  <text>元</text>
+                </view>
+                <view>今日佣金</view>
+            </view>
+        </view>
+    </view> -->
+
+
+    <view class="my_list">
+        <view class="my_list_box" bindtap="partner" wx:if='{{member.is_distribute == 1 && dianji == 1?false:true}}'>
+            <view class="my_list_left" >
+                <image src="/assets/icon_cooperation.png" ></image>
+                <view>申请合作</view>
+            </view>
+            <image src="/assets/to.png"></image>
+        </view>
+        <view class="my_list_box" bindtap="cooperative" wx:else>
+            <view class="my_list_left" >
+                <image src="/assets/icon_distribution.png" ></image>
+                <view>分销管理</view>
+            </view>
+            <image src="/assets/to.png"></image>
+        </view>
+        <view class="my_list_box" bindtap="address">
+            <view class="my_list_left">
+                <image src="/assets/icon-address.png" ></image>
+                <view>地址管理</view>
+            </view>
+            <image src="/assets/to.png"></image>
+        </view>
+        <view class="my_list_box" bindtap="discounts">
+            <view class="my_list_left" >
+                <image src="/assets/icon-coupons.png" mode="widthFix"></image>
+                <view>优惠券</view>
+            </view>
+            <image src="/assets/to.png"></image>
+        </view>
+        <view class="my_list_box" bindtap="product">
+            <view class="my_list_left">
+                <image src="/assets/product.png" mode="widthFix"></image>
+                <view>我的产品</view>
+            </view>
+            <image src="/assets/to.png"></image>
+        </view>
+        <view class="my_list_box" bindtap="idea_feedback">
+            <view class="my_list_left">
+                <image src="/assets/icon-feedback.png" mode="widthFix"></image>
+                <view>意见反馈</view>
+            </view>
+            <image src="/assets/to.png"></image>
+        </view>
+        <view class="my_list_box" bindtap="we">
+            <view class="my_list_left">
+                <image src="/assets/icon-About.png" mode="widthFix"></image>
+                <view>关于我们</view>
+            </view>
+            <image src="/assets/to.png"></image>
+        </view>
+        <view class="my_list_box" bindtap="tel">
+            <view class="my_list_left">
+                <image src="/assets/icon-Contact.png" mode="widthFix"></image>
+                <view>联系客服</view>
+            </view>
+            <view class="my_list_right">
+                <!-- <text></text> -->
+                <image src="/assets/to.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="jiatui">--嘉瑞科技提供技术支持--</view>
+</view>
+
+<!-- 拨打电话弹窗 -->
+ <view class='windows_box' wx:if="{{windows}}" catchtouchmove="return">
+  <view class='windows' catchtouchmove="return">
+    <view class='windows_top' catchtouchmove="return">
+        <view>你确定拨打客服电话吗？</view>
+    </view>
+    <view class='windows_botton' catchtouchmove="return">
+        <view class='windows_botton_left' bindtap='cancel'>取消</view>
+        <view class='windows_botton_reght' bindtap='confirm'>确定</view>
+    </view>
+  </view>
+</view>

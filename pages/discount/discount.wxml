@@ -1,0 +1,91 @@
+<!--pages/discount/discount.wxml-->
+<view class="nav">
+    <view wx:for='{{list}}' wx:key='{{index}}' bindtap="onclick" data-index="{{index}}" data-id="{{item.id}}"  class="{{listIndex==index?'on':''}}">{{item.name}}(0)</view>
+</view>
+<view class="discount">
+    <view class="{{listIndex==0?'coupon':'on'}}">
+      <view  wx:if='{{dat.user_yhq.one==""||dat.user_yhq==null?false:true}}'>
+         <view wx:for='{{dat.user_yhq.one}}' wx:key='{{index}}'>
+             <view class="coupon_box" style="background:url({{ldb_code}}) no-repeat;background-size:100%;">
+                <view class="coupon_top">{{item.price}}元</view>
+                <view class="coupon_middle">
+                    <view>{{item.title}}</view>
+                    <view>{{item.start_time}}-{{item.end_time}}</view>
+                </view>
+                <view class="coupon_botton">
+                    <view>满{{item.minprice}}元</view>
+                    <view>可用</view>
+                    <view bindtap="employ">立即使用</view>
+                </view>
+            </view>
+         </view> 
+      </view>
+      <view class='boxs' wx:else>
+          <view class='login_box'>
+              <image src='/assets/sale.png'></image>
+              <view class='message'>还没有优惠劵哦~</view>
+              <view class="add_site" bindtap='get'>去领取</view>
+          </view>
+      </view>
+    </view>
+
+
+
+    <view class="{{listIndex==1?'centre':'re'}}">
+        <view wx:if='{{dat.yhq_info.two==""||dat.yhq_info==null?false:true}}'>
+            <view wx:for='{{dat.user_yhq.two}}' wx:key='{{index}}'>
+                <view class="coupon_box" style="background:url({{code}}) no-repeat;background-size:100%;" >
+                    <view class="coupon_top on">{{item.price}}元</view>
+                    <view class="coupon_middle on">
+                        <view>{{item.title}}</view>
+                        <view>{{item.start_time}}-{{item.end_time}}</view>
+                    </view>
+                    <view class="coupon_botton">
+                        <view>满{{item.minprice}}元</view>
+                        <view>可用</view>
+                        <view class="on" wx:if='{{item.number==0}}'>已抢光</view>
+                        <view class="on" wx:else>已使用</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='boxs' wx:else>
+            <view class='login_box'>
+                <image src='/assets/sale.png'></image>
+                <view class='message'>还没有优惠劵哦~</view>
+                <view class="add_site" bindtap='get'>去领取</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="{{listIndex==2?'centre':'re'}}">
+        <view wx:if='{{dat.yhq_info.there==""||dat.yhq_info.there==null?false:true}}'>
+            <view wx:for='{{dat.user_yhq.there}}' wx:key='{{index}}'>
+                <view class="coupon_box" style="background:url({{code}}) no-repeat;background-size:100%;" >
+                    <view class="coupon_top on">{{item.price}}元</view>
+                    <view class="coupon_middle on">
+                        <view>{{item.title}}</view>
+                        <view>{{item.start_time}}-{{item.end_time}}</view>
+                    </view>
+                    <view class="coupon_botton">
+                        <view>满{{item.minprice}}元</view>
+                        <view>可用</view>
+                        <view class="on" wx:if='{{item.number==0}}'>已抢光</view>
+                        <view class="on" wx:else>已过期</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='boxs' wx:else>
+            <view class='login_box'>
+                <image src='/assets/sale.png'></image>
+                <view class='message'>还没有优惠劵哦~</view>
+                <view class="add_site" bindtap='get'>去领取</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="discountsss" bindtap="discount">去领券中心</view>
+</view>
+
+

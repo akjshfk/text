@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-tab": "/miniprogram_npm/_vant-weapp@0.5.7@vant-weapp/tab/index",
+    "van-tabs": "/miniprogram_npm/_vant-weapp@0.5.7@vant-weapp/tabs/index"
+  },
+  "navigationBarTitleText": "自助查询"
+}

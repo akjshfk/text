@@ -1,0 +1,157 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+  background-color: #fff;
+}
+textarea {
+  width: 100%;
+  height: auto;
+}
+.ft{
+  font-size: 28rpx;
+  color: #666666;
+}
+
+/* image, cover-image {
+  width: 100%;
+  height: 100%;
+} */
+
+/* 设置全局字体大小 */
+
+/* page {
+  font-size: 28rpx;
+  background-color: #fff;
+  position: relative;
+  color: #333;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+} */
+
+.bBcolor{
+  background: #53B7FF;
+}
+
+/* 清除浮动 */
+
+.clear {
+  zoom: 1;
+}
+
+.clear::after {
+  clear: both;
+  content: "";
+  height: 0;
+  visibility: hidden;
+  line-height: 0;
+}
+
+/* 转换成flex容器 */
+
+.flex {
+  display: flex;
+}
+
+/* 竖直排列 */
+
+.flexv {
+  flex-direction: column;
+}
+
+/* 自动填充 */
+
+.flex1 {
+  flex: 1;
+}
+
+/* 自动换行 */
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 水平居中 */
+
+.jus-c {
+  display: flex;
+  justify-content: center;
+}
+
+/* 水平两端对齐 */
+
+.jus-b {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 水平相等间距 */
+
+.jus-a {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 主轴终端对齐 */
+
+.jus-e {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 浮动元素 */
+
+.clearBoth {
+  position: relative;
+}
+
+/* 清楚浮动 */
+
+.clearBoth::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+/* 竖直居中 */
+
+.ali-c {
+  display: flex;
+  align-items: center;
+}
+
+/* 水平垂直居中 */
+
+.flexc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 文字一行溢出 */
+
+.oneline {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* 文字两行溢出 */
+
+.twoline {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

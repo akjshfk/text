@@ -1,0 +1,198 @@
+/* pages/my_order/my_order.wxss */
+page{
+  background: #f5f5f5;
+}
+.nav{
+  width: 100%;
+  height: 94rpx;
+  background: white;
+  /* padding:0 20rpx; */
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1rpx solid #eeeeee;
+  border-bottom: 1rpx solid #eeeeee;
+  position: fixed;
+  top: 0rpx;
+  left:0;
+}
+.nav>view{
+  padding: 26rpx 18rpx;
+  box-sizing: border-box;
+  border-bottom: 6rpx solid rgba(0, 0, 0, 0);
+}
+.nav .ons{
+  border-bottom: 6rpx solid red;
+}
+.my_order{
+  margin-top: 116rpx;
+}
+.my_order>.all, .my_order>.pending, .my_order>.processed, .my_order>.completed{
+  display: block;
+}
+.my_order>.on{
+  display: none;
+}
+.all_box{
+  padding: 0 22rpx;
+  background: white;
+  margin-top: 22rpx;
+}
+.all_box_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.all_box_top>view:nth-child(2){
+  font-size: 32rpx;
+  color: red;
+}
+.all_box_canter{
+  display: flex;
+  justify-content: space-between;
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.all_box_canter>image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.all_box_text{
+  width: 500rpx;
+}
+.all_box_text>view:nth-child(1){
+  font-size: 32rpx;
+}
+.all_box_text>view:nth-child(2){
+  font-size: 26rpx;
+  margin: 20rpx 0;
+  color: #575454;
+}
+.all_box_text>view:nth-child(3){
+  display: flex;
+   font-size: 30rpx;
+  justify-content: space-between;
+}
+/* .all_box_text>view:nth-child(2)>text:nth-child(2){
+  margin-left: 20rpx;
+} */
+.all_box_text>view:nth-child(3)>text:nth-child(2){
+  color: #a7a4a4;
+}
+.all_box_botton{
+  font-size: 26rpx;
+  height: 140rpx;
+}
+.all_box_botton>view:nth-child(1){
+  display: flex;
+  justify-content: flex-end;
+  margin: 20rpx 0;
+  font-size: 30rpx;
+}
+.all_box_botton>view:nth-child(2){
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+}
+.all_box_botton>view:nth-child(2)>view{
+  width: 160rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  border: 1rpx solid #dfdcdc;
+  border-radius: 40rpx;
+}
+.all_box_botton>view:nth-child(2):nth-child(1){
+  margin-right: 20rpx;
+}
+.all_box_botton>view:nth-child(2) .act{
+  color: #FC424B;
+  border:1rpx solid #FC424B;
+}
+
+/*数据为空时 */
+.boxs{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 240rpx;
+}
+.login_box>image{
+  width: 430rpx;
+  height: 320rpx;
+}
+.message{
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa7a7;
+}
+
+/* 《弹窗 */
+.windows_box{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.windows{
+  width: 600rpx;
+  height: 270rpx;
+  background-color: white;
+  margin: 0 auto;
+  position: fixed;
+  top: 444rpx;
+  left: 80rpx;
+  border-radius: 20rpx;
+}
+.windows_top{
+  width: 100%;
+  height: 66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #eeeeee;
+  font-size: 32rpx;
+}
+.windows_botton{
+  display: flex;
+  width: 100%;
+  height: 34%;
+}
+.windows_botton>view:nth-child(1), .windows_botton>view:nth-child(2){
+  width: 50%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx; 
+}
+.windows_botton>view:nth-child(2){
+  border-left:1rpx solid #eeeeee;
+  color: red;
+  font-size: 32rpx;
+}
+.ont{
+  padding: 0 140rpx;
+}
+.indent_left>view:nth-child(1){
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.indent_left>view:nth-child(1)>text:nth-child(1){
+  font-size: 40rpx;
+  font-weight: 800; 
+  margin-right: 10rpx;
+}
+
+

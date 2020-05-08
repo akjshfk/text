@@ -1,0 +1,34 @@
+<!--pages/partner/partner.wxml-->
+<view class='code'>
+
+    <view class='userInfo_box'>
+        <view class='userInfo_box_on'>
+           <text>姓名</text>
+           <view class='huq'>
+              <input type='text' value='{{dat.inviter.nickname}}' name="nickname" placeholder='请输入您的姓名'></input>
+           </view>
+        </view>
+        <view class='userInfo_box_on' bindtap='huq'>
+           <text>手机号</text>
+           <view class='huq'>
+              <input type='text' value='' name='sex' placeholder='请您的手机号码'></input>
+           </view>
+        </view>
+        <view class='userInfo_box_on'>
+           <text>地区</text>
+           <view class='huq'>
+              <input type='text' value='{{dat.inviter.level}}' name="nickname" placeholder='所属地区'></input>
+              <image src='/assets/arrow_down.png'></image>
+           </view>
+        </view>
+        <view class='userInfo_box_on ko'>
+           <text>详细地址</text>
+           <view class='huq'>
+              <input type='text' value='{{dat.inviter.in_time}}' name="birthday" placeholder='输入内容'></input>
+           </view>
+        </view>
+    </view>
+    <view class="button">
+        <button>提交申请</button>
+    </view>
+</view>

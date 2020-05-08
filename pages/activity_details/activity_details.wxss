@@ -1,0 +1,565 @@
+/* pages/activity_details/activity_details.wxss */
+page{
+  background: #f5f5f5;
+}
+.act{
+  color: #F8473D;
+}
+ .wxParse-p{
+  padding: 0rpx !important;
+}
+.activity_details{
+  width: 100%;
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+  background: white;
+  margin-bottom: 122rpx; 
+  border-top: 1rpx solid #eeeeee;
+}
+.imgt{
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.imgt>template{
+   width: 100%;
+}
+.details_title{
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.details_time{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.details_time>view:nth-child(2){
+  margin-left: 100rpx;
+}
+.details_time>view:nth-child(2)>image{
+  width: 46rpx;
+  height: 28rpx;
+  margin-right: 16rpx;
+}
+.activity_details>image{
+  width:100%;
+  height: 300rpx;
+}
+.bott{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: flex-end;
+}
+.like{
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.like>image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.like>view{
+  font-size: 30rpx;
+}
+
+/* 抽奖活动 */
+
+.Lottery_heart{
+  width: 100%;
+  height: 450rpx;
+}
+.award{
+  padding: 0 22rpx;
+  position: relative;
+}
+.award>view{
+  width: 100%;
+  padding: 70rpx 100rpx;
+  box-sizing: border-box;
+  background: #FEF2F4;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.Lottery .on>view{
+  padding: 60rpx 50rpx 30rpx;
+}
+.award_top{
+  width: 300rpx;
+  height: 70rpx;
+  background: #F9847F;
+  border-radius: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -35rpx;
+  left: 50%;
+  margin-left: -21%;
+}
+.award_top>image{
+ width: 66rpx;
+ height: 52rpx;
+}
+.award_top>view{
+ color: white;
+ font-size: 34rpx;
+ font-weight: 900;
+ margin-left: 10rpx;
+}
+.award_foot{
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx
+}
+.on .award_botton{
+  text-align:center;
+  font-size: 32rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.award_foot>text:nth-child(1){
+  width: 130rpx;
+  display: inline-block;  
+ }
+.award_foot>view:nth-child(2){
+   color: #F8473D;
+}
+.award_foot>view:nth-child(2)>image{
+  width: 16rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+.on{
+  margin-top: 80rpx;
+  position: relative;
+}
+.award_box{
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+}
+.on .award_box .award_top{
+  position: absolute;
+  top: -35rpx;
+}
+.award_conent{
+  display: flex;
+  margin-bottom: 20rpx;
+  font-size: 30rpx
+}
+.award_conent>view:nth-child(2){
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.award_box>view:nth-child(2)>view, .award_box>view:nth-child(3)>view, .award_box>view:nth-child(4)>view, .award_box>view:nth-child(5)>view{
+  width: 156rpx;
+  height: 50rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F9655D;
+  color: white;
+  margin-right: 20rpx;
+  font-weight: 700;
+}
+.award_box>view:nth-child(5){
+  margin-bottom: 0rpx;
+}
+.award_conent>text{
+  width: 500rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.participant{
+ margin: 0 auto;
+ width: 500rpx;
+ height: 90rpx;
+ background: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #F9655D;
+ border-radius: 60rpx;
+ margin-top: 80rpx;
+ margin-bottom: 100rpx;
+}
+.participant>view{
+  width: 500rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F9655D;
+  border-radius: 60rpx;
+  z-index: 999
+}
+.hint{
+  border: 1rpx solid #eeeeee;
+  padding: 50rpx 60rpx;
+  box-sizing: border-box;
+  background: white;
+  font-size: 30rpx;
+}
+.hint>view{
+  text-align: center;
+}
+.hint{
+  position: relative;
+}
+.hint>image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx 0 20rpx 240rpx;
+}
+.hint>view:nth-child(1)>image{
+  width: 50rpx;
+  height: 50rpx;
+  background: white;
+  position: absolute;
+  top: -73rpx;
+  right: 32rpx;
+}
+.hint>view:nth-child(2), .hint>view:nth-child(3){
+  color: #666666
+}
+.hint>view:nth-child(5){
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.hint>view:nth-child(6){
+  width: 500rpx;
+  height: 90rpx;
+  background: #F8473D;
+  color: white;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60rpx;
+  margin-left: 60rpx;
+}
+
+.img_box{
+  margin-bottom: 20rpx;
+  display: inline-block;
+}
+.friend{
+ width: 100%;
+ padding:30rpx 0rpx;
+ box-sizing: border-box;
+ display: flex;
+ justify-content: space-between;
+ font-size: 28rpx;
+}
+.friend>view>view>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.bott .qw {
+ padding:0 30rpx;
+}
+
+.opp{
+  padding: 30rpx 90rpx;
+}
+.friend>view>view{
+  text-align: center;
+}
+.img_box>image{
+  width: 70rpx;
+  height:70rpx;
+  border-radius: 50%;
+  margin: 0 10rpx 10rpx;
+}
+.cover{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position:fixed;
+  top: 0;
+  left: 0;
+}
+.invite{
+  width: 100%;
+  background: white;
+  font-size: 32rpx;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+}
+.invite>view:nth-child(1){
+ height: 90rpx;
+ padding: 0 30rpx;
+ border-bottom: 1rpx solid #eeeeee;
+}
+.goood_luck{
+  width: 695rpx;
+  height: 600rpx;
+  background: white;
+  padding: 30rpx;
+  box-sizing: border-box;
+  position: fixed;
+  left: 30rpx;
+  bottom: 200rpx;
+  border-radius: 20rpx;
+}
+.goood_luck_box{
+ width: 100%;
+ height: 100%;
+ border: 1rpx solid #EB584E;
+ border-radius: 20rpx;
+ padding: 100rpx 80rpx;
+  font-size: 33rpx;
+ box-sizing: border-box;
+}
+.goood_luck .omt{
+  padding: 30rpx 60rpx;
+}
+.goood_luck .omt>view:nth-child(1){
+  margin-bottom: 40rpx;
+}
+.omj{
+  margin: 36rpx 0 30rpx 16rpx;
+  color: #EB584E;
+  font-size: 30rpx;
+  font-weight: 550;
+}
+.omb{
+  font-size: 36rpx;
+  color: #EB584E;
+  font-weight: 700;
+}
+.omw{
+  color: #EB584E;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.oma{
+  font-size: 24rpx;
+}
+.use{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.omr{
+  background: #F8473D;
+  color: white;
+  font-size: 28rpx;
+  margin: 0rpx 0 0 10rpx;
+  /* position: absolute;
+  top: 650rpx;
+  left: 115rpx; */
+}
+.omgt{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 160rpx 220rpx;
+  z-index: 999;
+  /* position:absolute;
+  top: 850rpx;
+  left: 325rpx; */
+}
+.afer{
+  width: 100vw;
+  height: 100vh;
+}
+.goood_luck .oms{
+  padding: 0rpx;
+  margin: 0rpx;
+}
+.oms>view>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%; 
+}
+.goood_luck_box>view:nth-child(1){
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+.goood_luck_box>view:nth-child(2){
+  text-align: center;
+  color: #666666;
+  margin-bottom: 20rpx;
+}
+
+button::after{
+  border: none;
+  border-radius: 0; 
+  background: inherit;
+}
+.friend>button{
+  padding: 0;
+  margin: 0;
+  height: 120rpx;
+  border-radius: 50%;
+  background: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  left: 30rpx;
+}
+.oobutt>button{
+  padding: 0;
+  margin: 0;
+  background: inherit;
+}
+
+.friend>button>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 0 30rpx 10rpx;
+}
+.bott .opp>button{
+  padding: 0;
+  margin: 0;
+  width: 100rpx;
+  height: 100rpx;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bott .opp>button>image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 《弹窗 */
+.windows_box{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.windows{
+  width: 600rpx;
+  height: 270rpx;
+  background-color: white;
+  margin: 0 auto;
+  position: fixed;
+  top: 444rpx;
+  left: 80rpx;
+  border-radius: 20rpx;
+}
+.windows_top{
+  width: 100%;
+  height: 66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #eeeeee;
+  font-size: 32rpx;
+}
+.windows_botton{
+  display: flex;
+  width: 100%;
+  height: 34%;
+}
+.windows_botton>view:nth-child(1), .windows_botton>view:nth-child(2){
+  width: 50%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx; 
+}
+.windows_botton>view:nth-child(2){
+  border-left:1rpx solid #eeeeee;
+  color: red;
+  font-size: 32rpx;
+}
+.ont{
+  padding: 0 140rpx;
+}
+.indent_left>view:nth-child(1){
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.indent_left>view:nth-child(1)>text:nth-child(1){
+  font-size: 40rpx;
+  font-weight: 800; 
+  margin-right: 10rpx;
+}
+button::after{
+  border: none;
+  border-radius: 0; 
+  background: inherit;
+}
+.windows_botton .submitInfo .bou{
+  padding: 0;
+  margin: 0;
+  width: 300rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  background: inherit;
+  color: black;
+}
+.nickname{
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+.tuan{
+  font-size: 28rpx;
+  color: #EB584E;
+}
+.tuan_box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:space-around;
+}
+.tuan_box .img_box{
+  margin-bottom: 0
+}
+.Lottery .om{
+  background: #FED02F;
+  color: #581F05;
+}
+.goood_luck>image{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 70rpx 280rpx;
+}
+.heart_box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+.heart_box>image{
+ width: 40rpx;
+ height: 40rpx;
+}
+/* 悬浮按钮 */
+.home{
+  position: fixed;
+  bottom: 200rpx;
+  right: 30rpx;
+}
+.home image{
+  width: 80rpx;
+  height: 80rpx;
+}

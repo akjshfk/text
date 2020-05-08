@@ -1,0 +1,194 @@
+/* pages/withdraw/withdraw.wxss */
+/* pages/member//pages/money/money.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.money{
+  width: 100%;
+  height: 100%;
+  padding-top: 24rpx;
+}
+.money_heart{
+  width: 100%;
+  height: 90rpx;
+  margin-bottom: 24rpx;
+  padding: 0 22rpx;
+  line-height: 90rpx;
+  box-sizing: border-box;
+  background-color: white;
+}
+.money_heart_top{
+  font-size: 34rpx;
+  display: inline-block;
+}
+.money_heart_middle{
+  display: inline-block;
+  margin-left: 40rpx;
+  font-size: 36rpx;
+}
+.money_heart_button{
+  display: inline-block;
+  margin-left: 50rpx;
+  font-size: 36rpx;
+}
+.money_heart_button>image:nth-child(1){
+  width: 33rpx;
+  height: 33rpx;
+}
+.money_heart_middle>image:nth-child(1){
+  width: 33rpx;
+  height: 33rpx;
+}
+
+.bank{
+  width: 100%;
+  height: 100rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.bank>text{
+  font-size: 36rpx;
+  color: #cecaca;
+}
+.bank>image{
+  width: 20rpx;
+  height: 30rpx;
+}
+.bank>input{
+  max-width: 200rpx;
+  font-size: 30rpx;
+}
+/* <!-- <提现金额> --> */
+.money_sum{
+  width: 100%;
+  /* height: 390rpx; */
+  padding: 30rpx 30rpx 50rpx;
+  box-sizing: border-box;
+  background-color: white;
+  margin-top: 24rpx;
+}
+.money_sum_top{
+  font-size: 36rpx;
+}
+.money_sum_middle{
+  margin-top: 50rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ececec;
+}
+.money_sum_middle>text:nth-child(1){
+  font-size: 70rpx;
+  font-weight: 900;
+}
+.money_sum_middle>input{
+  width: 100%;
+  
+}
+.money_sum_button{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.money_sum_button>view:nth-child(1){
+  font-size: 30rpx
+}
+.money_sum_button>view:nth-child(2){
+  font-size: 30rpx
+}
+.hint{
+  width: 100%; 
+  margin: 24rpx 30rpx;
+  font-size: 30rpx;
+}
+
+.ensure{
+  width:700rpx;
+  height: 90rpx;
+  background-color: red;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 260rpx;
+  left: 28rpx;
+  font-size: 36rpx;
+  color: white;
+  font-weight: 600;
+}
+
+/* 输入框 */
+.payment{
+  width: 100%;
+  height: 667rpx;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+}
+.payment_box{
+  width: 100%;
+}
+.payment_box>text{
+  font-size: 32rpx;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.password{
+  width: 100%;
+   margin: 0rpx 38rpx 30rpx;
+}
+.password>input{
+  max-width: 110rpx;
+  height: 110rpx;
+  display: inline-block;
+  border: 1rpx solid #eeeeee;
+  text-align: center;
+  line-height: 110rpx;
+  font-size: 40rpx;
+}
+.number{
+  width: 100%;
+}
+.number>text{
+  width: 33%;
+  height: 110rpx;
+  display: inline-block;
+  border-top: 1rpx solid #eeeeee;
+  border-right: 1rpx solid #eeeeee;
+  border-left: 1rpx solid #eeeeee;
+  margin-left: 2.2rpx;
+  text-align: center;
+  font-size: 34rpx;
+  line-height: 110rpx;
+}
+.del{
+  width: 100%;
+  height: 110rpx;
+}
+.del>text:nth-child(1),.del>text:nth-child(3){
+  width: 33%;
+  height: 110rpx;
+  display: inline-block;
+  background-color: rgb(201, 196, 196);
+  text-align: center;
+  font-size: 34rpx;
+  line-height: 110rpx;
+}
+.del>text:nth-child(2){
+  width: 255rpx;
+  height: 110rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 34rpx;
+  line-height: 110rpx;
+   border-top: 1rpx solid #eeeeee;
+}

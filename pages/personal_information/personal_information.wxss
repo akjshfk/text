@@ -1,0 +1,129 @@
+/* pages/personal_information/personal_information.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.code{
+  width: 100%;
+  height: 100%;
+  border-top: 1rpx solid #eeeeee;
+}
+.userInfo_box_on>image{
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 50%;
+}
+.userInfo_box .ett{
+  margin-bottom: 22rpx;
+}
+.userInfo_box{
+  margin-top: 22rpx;
+  width: 100%;
+ 
+}
+.userInfo_box_on{
+  width: 100%;
+  height: 100rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+}
+.userInfo_box_on>text{
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.huq, .huqs{
+  display: flex;
+}
+.userInfo_box_on .huqs>button>image{
+  width: 190rpx;
+  height: 50rpx;
+  z-index: 999;
+}
+.userInfo_box_on .huqs>input{
+  width: 390rpx;
+}
+.userInfo_box_on input{
+  flex: 1;
+  text-align: right;
+  font-size: 30rpx;
+  font-weight: 700;
+  width:500rpx;
+}
+
+.huq>image{
+  width: 15rpx;
+  height: 28rpx;
+  margin-left: 22rpx;
+  position: relative;
+  top: 16rpx;
+  color: #7e7777;
+}
+.ko{
+  border-bottom: 0rpx;
+}
+button::after{
+  border: none;
+  border-radius: 0; 
+  background: inherit;
+}
+.butt>view{
+  width: 100%;
+  height: 100rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F8473D;
+  position: fixed;
+  border-radius: 0;
+  bottom: 0rpx;
+  left: 0rpx;
+  z-index: 999;
+}
+.userInfo_box_on .huqs>button{
+   width: 190rpx;
+   height: 50rpx;
+   display: flex;
+   align-items: center;
+   padding: 0;
+   background: inherit;
+}
+/* <!-- 性别弹窗 --> */
+.window{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.window_box{
+  width: 400rpx;
+  height: 220rpx;
+  background-color: white;
+  position: fixed;
+  top: 400rpx;
+  left: 180rpx;
+  padding: 26rpx;
+}
+.window_box>text{
+  font-size: 30rpx;
+}
+.window_box>view:nth-child(2), .window_box>view:nth-child(3){
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26rpx;
+}
+.window_box>view:nth-child(2)>text, .window_box>view:nth-child(3)>text{
+  font-size: 30rpx;
+}
+.window_box>view:nth-child(2)>icon, .window_box>view:nth-child(3)>icon{
+  zoom: 0.8;
+}

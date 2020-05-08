@@ -1,0 +1,98 @@
+/* pages/activity_list/activity_list.wxss */
+page{
+  background: #f5f5f5;
+}
+.activity_details{
+  width: 100%;
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+  background: white;
+  margin-bottom: 122rpx; 
+  border-top: 1rpx solid #eeeeee;
+}
+.imgt{
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.imgt>template{
+   width: 100%;
+}
+.activity_details .details .wxParse-p{
+ font-size: 29rpx;
+}
+.details_title{
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.details_time{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.details_time>view:nth-child(2){
+  margin-left: 100rpx;
+}
+.details_time>view:nth-child(2)>image{
+  width: 36rpx;
+  height: 23rpx;
+  margin-right: 16rpx;
+}
+.activity_details>image{
+  width:100%;
+  height: 300rpx;
+}
+.bott{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: flex-end;
+}
+.like{
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.like>image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.like>view{
+  font-size: 30rpx;
+}
+/* .details{
+} */
+
+button::after{
+  border: none;
+  border-radius: 0; 
+  background: inherit;
+}
+.bott .opp>button{
+  padding: 0;
+  margin: 0;
+  width: 160rpx;
+  height: 100rpx;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bott .opp>button>image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.bott .opp>button>view{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}

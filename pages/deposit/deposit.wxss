@@ -1,0 +1,60 @@
+/* pages/deposit/deposit.wxss */
+page{
+  background: #f5f5f5;
+}
+.deposit_top{
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  font-size: 32rpx;
+  border-top: 1rpx solid #eeeeee;
+}
+
+.deposit_top>view>view:nth-child(2){
+  color: #F8473D;
+  margin-top: 10rpx;
+}
+.deposit_top>image{
+  width: 20rpx;
+  height: 36rpx;
+}
+.deposit_foot{
+  margin-top: 22rpx;
+  background: white;
+  padding: 30rpx;
+}
+.deposit_conent{
+  margin-top: 100rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.deposit_conent>text{
+  font-weight: 600;
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+.deposit_foot>view:nth-child(1){
+  color: #999999;
+}
+.deposit_foot>view:nth-child(3){
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+.butt{
+  padding: 0 60rpx;
+  margin-top: 100rpx;
+}
+.butt>button{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: #F8473D;
+  border-radius: 60rpx;
+}

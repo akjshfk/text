@@ -1,0 +1,33 @@
+<!--pages/address_es/address_es.wxml-->
+<view class='addressAdd'>
+  <form bindsubmit='formSubmit' data-id='{{add_info.id}}'>
+    <view class='addressAdd_box'>
+        <view class='addressAdd_box_one add'>
+           <text>姓名：</text>
+           <input type='text' value='{{list.person}}' name='shperson' placeholder='请输入姓名'></input>
+        </view>
+        <view class='addressAdd_box_one'>
+           <text>电话：</text>
+           <input type='number' value='{{list.mobile}}' name='mobile' placeholder='请输入电话'></input>
+        </view>
+        <view class='addressAdd_box_thore' bindtap="site">
+           <text>服务地址</text>
+           <view>
+              <input type="text" value="{{site}}" name='site'  disabled="false"></input>
+              <image src='/assets/icon_positioning.png' ></image> 
+           </view>     
+        </view>
+        <view class='minute'>
+           <text>详细地址：</text>
+           <input type='text' value='{{list.min_address}}' name='min_address' placeholder='请输入详细地址'></input>
+        </view>
+    </view>
+
+
+    <view class='butt' >
+        <button form-type='submit'>保存</button>
+    </view>
+    
+  </form>
+    
+</view>

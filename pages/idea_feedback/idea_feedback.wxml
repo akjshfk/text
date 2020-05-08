@@ -1,0 +1,9 @@
+<!--pages/idea_feedback/idea_feedback.wxml-->
+<view class='textclass'>
+  <view class="textace">
+    <textarea bindinput='oninput' maxlength='200' placeholder='请输入您的反馈意见 . . .'></textarea>
+  </view>
+</view>
+<view class="btn-box">
+  <button bindtap='submitTap'>提交</button>
+</view>

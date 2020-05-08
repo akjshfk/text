@@ -1,0 +1,7 @@
+<!--pages/member/member.wxml-->
+<view class="member">
+    <view class="member_box">
+        <image src="/assets/Didnotopen.png"></image>
+        <view>当前服务尚未开通，敬请关注...</view>
+    </view>
+</view>

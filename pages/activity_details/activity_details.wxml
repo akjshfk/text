@@ -1,0 +1,179 @@
+<!--pages/activity_details/activity_details.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="activity_details" wx:if="{{options.is_huodong==0}}">
+    <view class="details_title">{{list.title}}</view>
+    <view class="details_time">
+        <view>{{list.add_time}}</view>
+        <view>
+            <image src="/assets/icon_visited.png"></image>
+            <text>{{list.hits}}</text>
+        </view>
+    </view>
+    <view class="imgt">  
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+
+    <view class="bott">
+        <view  class="like">
+          <image src="/assets/icon_like_s.png" wx:if='{{collect==0?false:true}}' bindtap="cancel" data-id="{{list.id}}"></image>
+          <image src="/assets/icon_like.png" wx:else bindtap="dainzan" data-id="{{list.id}}"></image>
+          <view>喜欢</view>
+        </view>
+        <view class="like opp qw">
+            <button open-type='share'><image src="/assets/icon_forwarding.png"></image></button>
+            <view>转发</view>
+        </view>
+    </view>
+</view>
+
+
+<!-- <抽奖活动> -->
+<view class="Lottery" wx:if="{{options.is_huodong==1}}" style="background: #F9655D;width: 100%;height: 100%">
+    <!-- <view wx:if='{{res.use==1}}' class="use">
+        <image src="{{arr[0]}}" class="afer"></image>
+        <view class="participant omr" bindtap="save">保存到图库</view>
+        <image src="/assets/minus_es.png" class="omgt" bindtap="minus_es"></image>
+    </view> -->
+    
+    <!-- <view wx:else> -->
+        <view class="Lottery_heart" style="background:url({{list.cover_img}}) no-repeat;background-size:100%;"></view>
+        <view class="award">
+            <view>
+              <view class="award_top"><image src="/assets/common_img.png"></image><view>奖品介绍</view></view>
+              <view class="award_foot"><text>奖品：</text><text>{{list.prize}}</text></view>
+            </view>
+        </view>
+        <view class="award on">
+            <view class="award_box">
+                <view class="award_top"><image src="/assets/common_img.png"></image><view>活动介绍</view></view>
+                <view class="award_conent"><view><text>规</text><text>则: </text></view><text>{{list.rule}}</text></view>
+                <view class="award_conent"><view>注意事项:</view><text>{{list.notice}}</text></view>
+                <view class="award_conent"><view>开奖时间:</view><text>{{list.start_time}}</text></view>
+                <view class="award_conent"><view><text>备</text><text>注:</text></view><text>{{list.remark}}</text></view>
+            </view>
+        </view>
+        <view class="award on">
+            <view>
+              <view class="award_top" wx:if='{{in_huodong==0 ||res.kaijiang!=1}}'><image src="/assets/common_img.png"></image><view>参与用户</view></view>
+              <view class="award_top" wx:if='{{res.kaijiang==1}}'><image src="/assets/common_img.png"></image><view>中奖用户</view></view>
+              <view class="award_botton" wx:if='{{in_huodong==0}}'>活动还没有人参与哟！赶快下手吧</view>
+              <!-- 建团成功 -->
+              <view wx:if='{{in_huodong!=0 && res.kaijiang!=1}}'>
+                  <view class="img_box"  wx:for='{{lis}}' wx:key='{{index}}'>
+                    <image src="{{item.avatar}}" ></image>
+                  </view>
+              </view>
+              <view class="award_foot" wx:if='{{in_huodong!=0 && res.kaijiang!=1}}'>
+                <view>已有{{res.num}}人参与，</view>
+                <view bindtap="more" data-id="{{list.id}}">
+                    <text>查看更多</text>
+                    <image src="/assets/red_to.png"></image>
+                </view>
+              </view>
+              <!-- 开奖人员 -->
+              <view class="tuan_box" wx:if='{{res.kaijiang==1}}'>  
+                  <view class="img_box"  wx:for='{{res.zhongjiang}}' wx:key='{{index}}'>
+                    <image src="{{item.avatar}}" ></image>
+                    <view class="nickname">{{item.nickname}}</view>
+                    <view class="tuan" wx:if='{{item.regiment==1}}'>团长</view>
+                  </view>
+              </view>
+            </view>
+        </view>
+        
+        <form class="oobutt" bindsubmit="submitInfo" report-submit='true' wx:if='{{in_huodong==0}}'>
+            <button class="participant" form-type="submit"  bindtap="participant"><view>参加抽奖</view></button>
+        </form>
+        <view class="participant" bindtap="invite" wx:if='{{res.full==1}}'>待开奖</view>
+        <view class="participant" bindtap="invite" wx:if='{{res.full==0}}'>邀请好友</view>
+        <view class="participant om" wx:if='{{res.kaijiang==1}}' bindtap="prize_winner" >已开奖</view>      
+    <!-- </view> -->
+        <view class="home" bindtap="home">
+            <image src="/assets/bottom_icon_phone_s.png" mode="widthFix"></image>
+        </view>
+</view>
+
+<!-- 《邀请好友》 -->
+<view class="cover" wx:if='{{invite}}' bindtap="cover"></view>
+<view class="invite" wx:if='{{invite}}'>
+    <view class="heart_box">
+       <image src="/assets/cancel-ico.png" bindtap="cover"></image>
+       <view>邀请好友</view>
+       <view></view>
+    </view>
+    <view class="friend opp" >
+       <view wx:for='{{tuan}}' wx:key='{{index}}'>
+          <view><image src="{{item.avatar}}"></image></view>
+          <view>{{item.nickname}}</view>
+          <view wx:if='{{item.regiment==1}}' class="act">团长</view>
+       </view>
+       <button open-type='share' wx:if='{{tuan.length==2?false:true}}'><image src="/assets/icon_increase.png" bindtap="share"></image></button>
+       <button open-type='share' wx:if='{{tuan.length==3?false:true}}'><image src="/assets/icon_increase.png" bindtap="share"></image></button>
+    </view>
+</view>
+
+<!-- <中奖名单> -->
+<view class="cover"  wx:if="{{res.use==0}}"></view>
+<view class="goood_luck" wx:if="{{res.use==0}}">
+   <view class="goood_luck_box">
+       <view>很遗憾，这次没中奖</view>
+       <view>———  中奖者名单 ———</view>
+       <view class="friend oms">
+          <view wx:for='{{res.zhongjiang}}' wx:key='{{index}}'>
+            <image src="{{item.avatar}}"></image>
+            <view>{{item.nickname}}</view>
+            <view class="omw" wx:if='{{item.regiment==1}}'>团长</view>
+          </view>
+       </view>
+   </view>
+   <image src="/assets/minus_es.png" class="omgt" bindtap="minus_es"></image>
+</view>
+
+<view class="cover"  wx:if="{{res.use==1}}"></view>
+<view class="goood_luck" wx:if="{{res.use==1}}">
+   <view class="goood_luck_box omt">
+       <view class="omb">恭喜您, 中奖啦！！</view>
+       <view class="friend oms">
+          <view wx:for='{{res.zhongjiang}}' wx:key='{{index}}'>
+            <image src="{{item.avatar}}"></image>
+            <view class="oma">{{item.nickname}}</view>
+            <view class="omw" wx:if='{{item.regiment==1}}'>团长</view>
+          </view>
+       </view>
+       <view class="omj">兑奖秘钥：{{res.codes}}</view>
+       <view class="participant omr" bindtap="save">复制兑奖秘钥</view>
+       <image src="/assets/minus_es.png" class="omgt" bindtap="minus_es"></image>
+   </view>
+</view>
+
+<!-- 关注公众号 -->
+<van-action-sheet show="{{show}}" title="关注提示">
+  <view class="hint">
+     <view bindtap="close"><image src="/assets/cancel-ico.png"></image></view>
+     <view>避免中奖后无法发放奖品， </view>
+     <view>您需要关注“众超之家”公众号，方便领取奖品！</view>
+     <image src="/assets/logo.png"></image>
+     <view>众超之家清洗服务</view>
+     <view bindtap="copy">一键复制公众号名称</view>
+  </view>
+</van-action-sheet>
+
+<!-- 拨打电话弹窗 -->
+ <view class='windows_box' wx:if='{{windows}}'   catchtouchmove="return">
+  <view class='windows' catchtouchmove="return">
+    <view class='windows_top' catchtouchmove="return">
+        <view>你是否参与该活动？</view>
+    </view>
+    <view class='windows_botton'  catchtouchmove="return">
+        <view class='windows_botton_left' bindtap='cancel'>取消</view>
+        <form class="submitInfo" bindsubmit="submitInfo" report-submit='true' >
+           <button form-type="submit" class="bou" bindtap='confirm'><view class='windows_botton_reght'  >确定</view></button>
+        </form>
+    </view>
+  </view>
+</view>
+
+<!-- <canvas class='flex'   canvas-id='canv' style='width:320px;height:504px; '></canvas> -->
+
+
+

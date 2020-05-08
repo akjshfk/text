@@ -1,0 +1,21 @@
+<!--pages/audit/audit.wxml-->
+<view class="audit" style="background:url({{backdrop}}) no-repeat;background-size:100%;">
+    <view class="audit_box" wx:if='{{status==2}}'>
+        <image src="/assets/audit_failure_png.png" mode="widthFix"></image>
+        <view>很抱歉，您的审核未通过</view>
+        <view>抱歉，您的资料信息存在不符，请重新核实后再申请</view>
+        <view bindtap="anew">重新申请</view>
+    </view>
+    <view class="audit_box" wx:if='{{status==1}}'>
+        <image src="/assets/audit_png.png" mode="widthFix"></image>
+        <view>提交审核中，请等待管理员审核</view>
+        <view class="ton">预计1-3个工作日审核完毕</view>
+        <!-- <view>修改信息</view> -->
+    </view>
+    <view class="audit_box" wx:if='{{status==3}}'>
+        <image src="/assets/success.png" mode="widthFix"></image>
+        <view>恭喜您 资料认证成功</view>
+        <view class="ton">经核实 您提交的资料已通过</view>
+        <view bindtap="ascertain">确定</view>
+    </view>
+</view>

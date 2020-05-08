@@ -1,0 +1,21 @@
+<!--pages/deposit/deposit.wxml-->
+<view class="deposit">
+    <view class="deposit_top">
+        <view>
+            <view>到账银行卡</view>
+            <view>江西银行(1128)</view>
+        </view>
+        <image src="/assets/to-ico.png"></image>
+    </view>
+    <view class="deposit_foot">
+        <view>提现金额</view>
+        <view class="deposit_conent">
+            <text>￥</text>
+            <input type="number"></input>
+        </view>
+        <view>可用金额90.00元(最小提现金额100元)</view>
+    </view>
+    <view class="butt">
+        <button>提现</button>
+    </view>
+</view>

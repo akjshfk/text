@@ -1,0 +1,29 @@
+<!--pages/cashDetail/cashDetail.wxml-->
+<view class='cashDetail'>
+  <view class='cashDetail_box' wx:for='{{list}}' wx:key='{{index}}'>
+    <view>
+        <view class='cashDetail_top'>
+            <text>提现到微信零钱</text>
+        </view>
+        <view class='cashDetail_botton'>
+            <text>{{item.time}}</text>
+        </view>
+    </view>
+    
+    <view class='cashDetail_middle'>
+        <view>￥-{{item.price}}</view>
+        <view wx:if="{{item.status==2}}">审核中</view>
+        <view wx:if="{{item.status==1}}">审核成功</view>
+        <view wx:if="{{item.status==3}}">审核失败</view>
+    </view>
+    
+  </view>
+
+   <!-- 《无数据状态 -->
+    <view class='teamAward_all' wx:if="{{list==''?true:false}}">
+      <view class='teamAward_imgt' >
+        <image src='/assets/nocash.png'></image>
+        <view>暂时还没有明细哦~</view>
+      </view>
+    </view>
+</view>

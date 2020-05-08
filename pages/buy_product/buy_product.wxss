@@ -1,0 +1,55 @@
+/* pages/buy_product/buy_product.wxss */
+page{
+  background: #f5f5f5;
+}
+.buy_product{
+  padding: 22rpx 0 22rpx;
+}
+.buy_product_heart{
+  background: white;
+  width: 100%;
+}
+.buy_product_box{
+  height: 100rpx;
+  padding: 0 22rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.buy_product_box>input{
+  width: 520rpx;
+}
+.button{
+  height: 200rpx;
+}
+.button>button{
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #858080;
+  font-size: 30rpx;
+  color: white;
+}
+.buy_product_conent{
+  height: 180rpx;
+  padding: 22rpx;
+  border-bottom:1rpx solid white;
+  background: #c7c5c5;
+}
+.conent_box{
+  font-size: 30rpx;
+}
+.conent_box>view:nth-child(2){
+  display: flex;
+  margin: 20rpx 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.conent_del{
+  width: 120rpx;
+  height: 60rpx;
+  background: white;
+  border-radius: 10rpx;
+}

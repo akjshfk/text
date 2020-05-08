@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+     <view class="imgt"><image src="/assets/activity_banner.png" ></image></view>
+     <view class="login_box">
+        <image src="/assets/icon_account.png"></image>
+        <input type="text" placeholder="请输入登录账号"></input>
+     </view>
+     <view class="login_box">
+        <image src="/assets/icon_password.png"></image>
+        <input type="text" placeholder="请输入登录密码"></input>
+     </view>
+     
+     
+     <button>登录</button>
+</view>

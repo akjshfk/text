@@ -1,0 +1,186 @@
+<!--pages/subscribe_rinse/subscribe_rinse.wxml-->
+<view class="rinse">  <!-- <地址无数据> -->
+    <view class="rinse_heart ft" bindtap="site" wx:if='{{dat.address==null?true:false}}'>
+      <view>
+          <image src="/assets/icon_adress.png" ></image>
+          <view>服务地址</view>
+      </view>
+      <image src="/assets/cut-off_line.png" class="imgt"></image>
+    </view>
+    <!-- <地址> -->
+    <view class="rinse_address ft" bindtap="site" wx:else>
+      <view>
+          <view class="phone">
+              <view>联系人：{{dat.address.person}}</view>
+              <view class="phone_es">
+                  <view>电话：{{dat.address.mobile}}</view>
+                  <image src="/assets/to-ico.png"></image>
+              </view>
+          </view>
+          <view class="address">{{dat.address.address}}{{dat.address.min_address}}</view>
+      </view>
+      <image src="/assets/cut-off_line.png" class="imgt"></image>
+    </view>
+
+    <view class="rinse_conent" wx:for='{{info}}' wx:key='{{index}}'>
+        <image src="/assets/minus.png"  bindtap="delete" data-index="{{index}}"></image>
+        <view>
+            <image src="{{item.img}}"></image>
+            <view class="rinse_conent_right ft">
+              <view>{{item.title}}</view>
+              <view>
+                  <!-- <text>品牌：海尔</text> -->
+                  <text class="guige">规格：{{item.guige_name}}</text>
+              </view>
+              <view>
+                  <text>{{item.price}}元</text>
+                  <view class="count" >
+                      <view bindtap="minus" data-index="{{index}}">-</view>
+                      <view>{{item.num}}</view>
+                      <view bindtap="plus" data-index="{{index}}">+</view>
+                  </view>
+                  <!-- <text>x{{dat.num}}</text> -->
+              </view>
+            </view>
+        </view>
+    </view>
+    <view class="augment" bindtap="augment">
+        <image src="/assets/plus.png"></image>
+        <view >点击加号，可新增加要清洗的商品</view>
+    </view>
+    <view class="way ft">优惠方式</view>
+    <view class="radio_button ft  es" bindtap="coupon" data-id="1" wx:if='{{couponIndex==0?true:false}}'>
+        <view>优惠劵</view>
+        <view class="radio">
+            <view class="key"></view>
+        </view>  
+    </view>
+
+    <view class="radio_button ft  es" bindtap="coupon" data-id="0" wx:if='{{couponIndex==1?true:false}}'>
+        <view>优惠劵</view>
+        <view class="radio">
+           <view wx:if='{{couponIndex==1}}'>-{{coupon.price}}</view>
+           <image src="/assets/icon_s.png"></image>
+        </view>  
+    </view>
+
+
+
+       
+    <view class="radio_button ft" bindtap="promotion_code" data-id="1" wx:if='{{codeIndex==0?true:false}}'>
+        <view>优惠码</view>
+        <view class="radio">
+           <view></view>
+           <view class="key"  ></view>
+        </view>
+    </view>
+    <view class="radio_button ft" bindtap="promotion_code" data-id="0"  wx:else='{{codeIndex==1?true:false}}'>
+        <view>优惠码</view>
+        <view class="radio">
+           <view></view>
+           <image  src="/assets/icon_s.png"></image>
+        </view>
+    </view>
+    <view class="present" wx:if='{{codeIndex==1}}'>
+      <view class="present_box ft">
+          <view class="present_box_top">
+            <input type="text" bindinput='inpu' placeholder="请输入您持有的优惠码"></input>
+            <view class="ft" bindtap="present">提交</view>
+          </view>
+          <view class="present_box_button" wx:if='{{codesBox.minprice}}'>当前优惠码可优惠金额{{codesBox.price}}元</view>
+      </view>    
+    </view>
+    <view class="serve ft">
+       <view>服务时间：</view>
+       <view>
+          <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+              <view class="picker">
+              <input type="text" placeholder="请选择服务时间" start="{{time}}" value="{{date}}" disabled="true"></input>
+              </view>
+          </picker>
+          <image src="/assets/to.png"></image>
+       </view>
+    </view>
+    <view class="way ft">备注：</view>
+    <view class="remark">
+        <text wx:if='{{window||windows||shop_box}}'>{{memos}}</text>
+        <textarea bindinput='oninput' wx:else  value="{{memos}}"  placeholder="请输入你的想法..."  maxlength='200'></textarea>
+    </view>
+
+    <view class="money ft">
+       <view  class="money_party">
+           <view>费用合计</view>
+           <view >{{price}}元</view>
+       </view>
+       <view  class="money_party middlet">
+           <view>优惠折扣</view>
+           <view wx:if='{{discount==null?false:true}}'>{{discount}}元</view>
+           <view wx:else>0.0元</view>
+       </view>
+       <view  class="money_party">
+           <view>应付费用</view>
+           <view>{{zj}}元</view>
+       </view>
+        <form class="foot" bindsubmit="submitInfo" report-submit='true'>
+            <button class="button" form-type="submit"  bindtap="refer"><view class="tijiao">提交预约</view></button>
+        </form>
+    </view>
+   
+</view>
+
+<!-- <弹窗> -->
+  <van-picker
+    show-toolbar
+    wx:if="{{window}}"
+    title="优惠详情"
+    columns="{{yhqArr}}"
+    bind:cancel="onCancel"
+    bind:confirm="onConfirm"
+  />
+  
+  <!-- 支付弹窗 -->
+<view class='cover' wx:if='{{windows}}'></view>
+<view class='windows' wx:if='{{windows}}'>
+    <view class='windows_heart'>
+        <image src='/assets/cancel-ico.png' bindtap='cancelES'></image>
+        <text>支付方式</text>
+        <text></text>
+    </view>
+    <view class='sum'>
+       <text>支付金额</text>
+       <view>{{zj}}元</view>
+    </view>
+    <view class='WeChat'>
+      <view class='WeChat_left'>
+          <image src='/assets/pay_wechat.png'></image>
+          <text>微信支付</text>
+      </view>
+      <icon  type="success" size="20" color="red"  data-id='2'  bindtap="selectList"/>
+      <!-- <icon wx:else type="circle" size="20"  data-id='2'  bindtap="selectList"/>     -->
+    </view>
+    <view class='button' bindtap='payType'>
+        <view>确认支付</view>
+    </view>
+</view>
+
+<!-- 商品选择 -->
+<view class="shop_es" wx:if='{{shop_box}}'></view>
+<view class="shop_box" wx:if='{{shop_box}}'>
+    <view class="subscribe_heard">
+        <view class="subscribe_heard_box" bindtap="print" data-id="{{item.id}}" data-index="{{index}}" wx:for='{{shop_dat}}' wx:key='{{index}}'>
+             <view class="oppo {{printIndex==index?'act':''}}"><image src="{{item.img}}"  class="{{printIndex==index?'act':''}}"></image></view>
+             <view class="{{printIndex==index?'act_es':''}}">{{item.title}}</view>
+             <view>{{item.min_price}}元起</view>
+        </view>
+    </view>
+    <view class="standard">
+        <view>规格</view>
+        <view class="standard_but" >
+            <view class="{{onIndex==index?'on':''}}" wx:for='{{shop_guige.guige}}' wx:key='{{index}}'  bindtap="specification" data-onid="{{item.id}}" data-index="{{index}}">{{item.guige}}</view>
+        </view>
+    </view>
+    <view class="switch">
+        <view bindtap="cancel">取消</view>
+        <view bindtap="add">确认添加</view>
+    </view>
+</view>

@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="index">
+   <view class="index_swiper " style="height:{{height}}">
+      <view>
+          <swiper autoplay circular indicator-dots indicator-active-color='#ffffff' interval="3000" class='banners'>
+            <swiper-item wx:for="{{img}}" wx:key="{{index}}"  >
+              <image lazy-load src='{{item.content}}' class="imgt" bindload="imgHeight" mode="widthFix"></image>
+            </swiper-item>
+          </swiper>
+      </view>
+   </view>
+   <view class="my_member" bindtap="member">
+       <image src="/assets/my_member.png"  class="imt"></image>
+   </view>
+   <view class="index_list">
+       <view class="index_list_box" bindtap="rinse">
+          <view class="po">
+             <image src="/assets/burner.png" ></image>
+             <view>预约清洗</view>
+          </view>
+       </view>
+       <view class="index_list_box" bindtap="toList">
+           <image src="/assets/shop.png"></image>
+           <view>门店列表</view>
+       </view>
+       <view class="index_list_box" bindtap="query">
+          <view class="po">
+              <image src="/assets/query.png" ></image>
+              <view>自动查询</view>
+          </view>
+       </view>
+       <view class="index_list_box" bindtap="handle">
+           <image src="/assets/service.png"></image>
+           <view>领劵中心</view>
+       </view>
+   </view>
+   <view class="jiatui">--嘉瑞科技提供技术支持--</view>
+   <button class="booo" open-type="contact" bindcontact="handleContact"><image src="/assets/bottom_icon_home_s.png"></image></button>
+</view>
+

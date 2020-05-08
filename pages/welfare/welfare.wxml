@@ -1,0 +1,28 @@
+<!--pages/welfare/welfare.wxml-->
+<view class="activity_list" wx:if='{{list==""?false:true}}'>
+    <view class="listt ft at" wx:for='{{list}}' wx:key='{{index}}'>
+        <view>{{item.title}}</view>
+        <view class="listt_middle">
+            <image wx:if='{{item.is_huodong==1}}' src="{{item.ad_img}}" mode="widthFix" bindtap="check"  data-id="{{item.id}}" data-is_huodong="{{item.is_huodong}}"></image>
+            <image wx:if='{{item.is_huodong==0}}' src="{{item.img}}" mode="widthFix" bindtap="check"  data-id="{{item.id}}" data-is_huodong="{{item.is_huodong}}"></image>
+            <view class="listt_middle_right">
+                <view class="time_es ft">
+                    <text>开始时间：</text>
+                    <text>{{item.start_time}}</text>
+                </view>
+                <view>进行中</view>
+            </view>
+        </view>
+        <view class="check_box ft" bindtap="check"  data-id="{{item.id}}" data-is_huodong="{{item.is_huodong}}">
+            <view class="check">查看详情</view>
+            <image src="/assets/to-ico.png"></image>
+        </view>
+    </view>
+</view>
+
+<view class='boxs' wx:else>
+    <view class='login_box'>
+        <image src='/assets/gift.png'></image>
+        <view class='message'>当前暂无活动~</view>
+    </view>
+ </view>

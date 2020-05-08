@@ -1,0 +1,8 @@
+<!--pages/people_list/people_list.wxml-->
+<view class="people_list" wx:for='{{list}}' wx:key='{{index}}'>
+    <image src="{{item.avatar}}"></image>
+    <view class="people">
+        <view>{{item.nickname}}</view>
+        <view>参与时间：{{item.add_time}}</view>
+    </view>
+</view>

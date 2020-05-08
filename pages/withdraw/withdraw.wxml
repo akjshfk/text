@@ -1,0 +1,77 @@
+<!--pages/withdraw/withdraw.wxml-->
+<view class='money'>
+    <view class='money_heart'>
+        <view class='money_heart_top'>选择提现方式 :</view>
+        <view class='money_heart_middle' bindtap='WeChat' data-id='1'>
+            <image src='/assets/checked.png' wx:if="{{check}}"></image>
+            <image src='/assets/checked-on.png' wx:else></image>
+            微信
+        </view>
+        <view class='money_heart_button' bindtap='bank' data-id='2'>
+            <image src='/assets/checked.png' wx:if="{{checkes}}"></image>
+            <image src='/assets/checked-on.png' wx:else></image>
+            银行卡
+        </view>
+    </view>
+
+    <view class='bank' wx:if="{{bank}}" bindtap='banks'>
+       <input type='text' placeholder='选择银行卡' value='{{name}}'></input>
+       <!-- <text>{{name}}</text> -->
+       <image src='/assets/to-ico.png'></image>
+    </view>
+
+    <!-- <提现金额> -->
+    <view class='money_sum'>
+       <view class='money_sum_top'>提现金额：{{map.commission}}元</view>
+       <view class='money_sum_middle'>
+           <text>￥</text>
+           <input type='number' placeholder='请输入提现金额' value='{{moneys}}'  bindinput='moneys'></input>
+       </view>
+       <view class='money_sum_button'>
+           <view>提现费用：</view>
+           <view >0.00元</view>
+       </view>
+       <view class='money_sum_button'>
+           <view>预计到账时间</view>
+           <view>当天到账</view>
+       </view>
+    </view>
+    
+    <!-- 温馨提示 -->
+    <view class='hint'>
+       <text>温馨提示：1、提现金额不能小于{{map.com}}元</text>
+    </view>
+    
+    <view class='ensure' bindtap='ensure'>
+        <text>提现</text>
+    </view>
+    
+    
+
+
+    <!-- <view class='payment' wx:if="{{payment}}">
+      <view class='payment_box'>
+          <text>请输入六位支付密码</text>
+          <view class='password'>
+              <input type='password' disabled='true' value='{{password[0]}}'></input>
+              <input type='password' disabled='true' value='{{password[1]}}'></input>
+              <input type='password' disabled='true' value='{{password[2]}}'></input>
+              <input type='password' disabled='true' value='{{password[3]}}'></input>
+              <input type='password' disabled='true' value='{{password[4]}}'></input>
+              <input type='password' disabled='true' value='{{password[5]}}'></input>
+          </view>
+          <view class='number'>
+              <text wx:for="{{num}}" wx:key='{{index}}' bindtap='number' data-id='{{item.id}}' data-woo='balance' data-index='{{index}}' data-app='APPLET'>{{item.name}}</text>
+          </view>
+          <view class='del'>
+              <text bindtap='cancel'>取消</text>
+              <text bindtap='number' data-id='0'>0</text>
+              <text bindtap='del'>删除</text>
+          </view>
+      </view> 
+    </view> -->
+
+
+
+</view>
+

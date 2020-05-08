@@ -1,0 +1,27 @@
+<!--pages/service_evaluation/service_evaluation.wxml-->
+<view class="service_evaluation">
+    <view class="evaluate">
+       <van-rate
+          value="{{ value }}"
+          size="{{ 25 }}"
+          color="#f44"
+          void-color="#eee"
+          void-icon="star"
+          bind:change="onChange"
+        />
+    </view>
+    <view class="evaluate_list">
+        <view wx:for='{{arr}}' wx:key='{{index}}'>{{item.name}}</view>
+    </view>
+    <view class="evaluate_conent">
+        <view>宝贝评价</view>
+        <textarea type='text' placeholder="宝贝满足你的期待吗？请说说吧" bindinput="opinion"></textarea>
+        <view class="zengjia">
+            <image src="/assets/ph.png" bindtap="zengjia"></image>
+        </view>
+    </view>
+    
+</view>
+<view class="present" bindtap="publish">
+    <view>发表</view>
+</view>

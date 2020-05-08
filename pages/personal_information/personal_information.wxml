@@ -1,0 +1,65 @@
+<!--pages/personal_information/personal_information.wxml-->
+<view class='code'>
+
+    <view class='userInfo_box'>
+        <view class='userInfo_box_on'>
+           <text>我的头像</text>
+           <image src="{{member.img}}"></image>
+        </view>
+        <view class='userInfo_box_on ett'>
+           <text>我的昵称</text>
+           <text>{{member.name}}</text>
+        </view>
+        <!-- <view class='userInfo_box_on'>
+           <text>基本资料</text>
+        </view> -->
+        <view class='userInfo_box_on'>
+           <text>手机号</text>
+           <view class='huqs'>
+              <input type='text' value='{{phone}}' bindinput="phone"  wx:if='{{phone==""?false:true}}'></input>
+              <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:else>
+              <image src="/assets/gain.png"></image></button>
+           </view>
+        </view>
+        <!-- <view class='userInfo_box_on'>
+           <text>生日</text>
+           <view class='huq'>
+              <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+                  <view class="picker">
+                      <input type="text" placeholder="请选择服务时间" value="{{birthday}}" disabled="true"></input>
+                  </view>
+              </picker> -->
+              <!-- <input type='text' value='{{dat.inviter.level}}' name="nickname" placeholder='点击选择'></input> -->
+              <!-- <image src="/assets/to-ico.png"></image>
+           </view>
+        </view>
+        <view class='userInfo_box_on ko'>
+           <text>性别</text>
+           <view class='huq'>
+              <input type='text' value='{{six==1? "男":"女"}}' bindtap="six" disabled="true" placeholder='未知'></input>
+              <image src="/assets/to-ico.png"></image>
+           </view>
+        </view>-->
+    </view>
+    <view class="butt" bindtap="butt">
+        <view>保存</view>
+    </view>
+</view>
+
+<!-- 性别弹窗 -->
+<!-- <view class='window' wx:if="{{window}}">
+    <view class='window_box'>
+        <text>选择性别</text>
+        <view>
+            <text>男</text>
+            <icon wx:if="{{isIcon}}" type="success" size="20" color="red"   bindtap="selectList"/>
+            <icon wx:else type="circle" size="20"      bindtap="selectList"/>
+        </view>
+        <view>
+            <text>女</text>
+            <icon wx:if="{{icon}}" type="success" size="20" color="red"  bindtap="select"/>
+            <icon wx:else type="circle" size="20"    bindtap="select"/>
+        </view>
+    </view>
+</view> -->
+

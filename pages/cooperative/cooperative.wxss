@@ -1,0 +1,94 @@
+/* pages/cooperative/cooperative.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.addressAdd{
+  padding-top: 22rpx;
+}
+.addressAdd_box{
+  width: 100%;
+  padding: 0 30rpx;
+  background-color: white;
+  border-bottom: 1rpx solid #eeeeee;
+  box-sizing: border-box;
+}
+.addressAdd_box_one{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #eeeeee; 
+  display: flex;
+  align-items: center;
+}
+.minute{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.minute>input{
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  width: 480rpx;
+}
+.addressAdd_box_one>text, .minute>text{
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.addressAdd_box_one>input{
+  margin-left: 70rpx;
+  font-size: 30rpx;
+  width: 490rpx;
+}
+.add input{
+  margin-left: 70rpx;
+  width: 500rpx;
+}
+.addressAdd_box_thore{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #eeeeee; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addressAdd_box_thore>view>input{
+  width: 480rpx;
+  /* flex: 1; */
+  font-size: 28rpx;
+  /* text-align: right; */
+}
+.addressAdd_box_thore>text{
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.addressAdd_box_thore>view{
+  display: flex;
+  align-items: center;
+}
+.addressAdd_box_thore>view>image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+.butt{
+  width: 100%;
+  height: 90rpx;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+  margin-top: 120rpx;
+}
+.butt button{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#F8473D;
+  border-radius: 50rpx;
+  font-size: 34rpx;
+  color: white;
+
+}

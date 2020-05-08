@@ -1,0 +1,67 @@
+/* pages/query/query.wxss */
+page{
+  background: #f5f5f5;
+}
+.nav{
+  height: 94rpx;
+  background: white;
+  padding:0 20rpx;
+  display: flex;
+  font-size: 32rpx;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1rpx solid #eeeeee;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.nav .on{
+  border-bottom: 6rpx solid red;
+}
+.query>.install, .query>.upkeep, .query>.employ{
+  display: block
+}
+.query>.in{
+  display: none;
+}
+.query{
+  padding: 22rpx 0;
+}
+.nav>view{
+  padding: 26rpx 40rpx;
+  border-bottom: 6rpx solid rgba(0, 0, 0, 0);
+}
+.query_conent{
+  padding: 30rpx;
+  background: white; 
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.query_conent>image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.query_text{
+  height: 180rpx;
+}
+.query_text>view:nth-child(1){
+  width: 500rpx;
+  font-size: 32rpx;
+  color: #333333;
+  margin-top: 10rpx;
+}
+.query_right{
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #b9b5b5;
+}
+.query_right>view:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+.query_right>view:nth-child(2)>image{
+  width: 36rpx;
+  height: 23rpx;
+  margin-right: 10rpx;
+}

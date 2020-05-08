@@ -1,0 +1,46 @@
+<!--pages/shop_list/shop_list.wxml-->
+<view class="shop_list">
+    <view class="area" wx:if='{{list}}'>
+        <!--搜索框部分-->
+        <view class='search-box'>
+          <view class='search-left'>
+            <image src="../../assets/search.png"></image>
+            <input type='text' focus 
+                    placeholder='请输入您要搜索的内容' 
+                    confirm-type="search" 
+                    value="{{inputKey}}"
+                    bindinput="inputVal"
+                    bindconfirm="search">
+            </input>
+            <icon type='clear' size='18' data-index="{{index}}" hidden='{{!inputKey}}' class='icon' bindtap='resetInputKey'></icon>
+          </view>
+          <text class="search-btn {{inputKey ? 'on' : ''}}" bindtap="search">搜索</text>
+        </view>
+        
+        <image src="{{res.img}}" mode="widthFix"></image>
+        <view class="area_box ft" wx:for='{{list}}' wx:key="{{index}}">
+            <view class="area_type">
+               <view class="area_type_top">
+                   <image src="/assets/icon_adress.png" mode="widthFix" ></image>
+                   <text>{{item.name}}</text>
+               </view>
+               <view>{{item.juli}}m</view>
+            </view>
+            <view class="area_type_middle">
+               <view class="oneline">{{item.address}}</view>
+               <!-- <view>{{item.mobile}}</view> -->
+            </view>
+            <view class="area_type_botton">
+               <view bindtap="avigraph" data-name="{{item.address}}" data-lat="{{item.latitude}}" data-log="{{item.longitude}}">地图导航</view>
+               <view bindtap="dial" data-mobile="{{item.mobile}}">一键拨号</view>
+            </view>
+        </view>
+    </view>
+    <view class='boxs' wx:else>
+      <view class='login_box'>
+          <image src='/assets/site.png'></image>
+          <view class='message'>您还为添加收货地址~</view>
+          <view class="add_site" bindtap='add'>添加地址</view>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/add_bank/add_bank.wxml-->
+<view class="add_bank">
+     <view>请绑定持卡人本人的银行卡</view>
+     <view class="add_bank_box">
+        <view>持卡人</view>
+        <input type="text" bindinput="name" placeholder="请输入真实的姓名"></input>
+     </view>
+     <view class="add_bank_box">
+        <view>卡号</view>
+        <input type="text" bindinput="code" placeholder="请输入银行卡号"></input>
+     </view>
+     <view class="add_bank_box on" bindtap="banking">
+        <view>开户银行</view>
+        <input type="text" value="{{bank_name}}" disabled="true" placeholder="请输入银行卡"></input>
+        <image src="/assets/drop-down.png"></image>
+     </view>
+     <view class="add_bank_box">
+        <view>开户行地址</view>
+        <input type="text" bindinput="bank"  placeholder="请输入开户行地址"></input>
+     </view>
+     <view class="butt" bindtap="butt">
+         <button>绑定</button>
+     </view>
+</view>
+
+<!-- <弹窗> -->
+  <van-picker
+    show-toolbar
+    wx:if="{{isWindow}}"
+    title="请选择开户行"
+    columns="{{list}}"
+    bind:cancel="onCancel"
+    bind:confirm="onConfirm"
+  />
+
